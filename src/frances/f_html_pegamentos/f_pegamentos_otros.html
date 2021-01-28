@@ -1,0 +1,952 @@
+<div id="app">
+    <div class="panel panel-left panel-reveal">
+        <div class="block">
+            <div class="block-title">Bienvenido!</div>
+            <div class="list accordion-list">
+                <ul>
+                    <li class="accordion-item"><a href="/index/" class="item-link item-content panel-close">Inicio</a></li>
+                    <li class="accordion-item"><a href="/compania/" class="item-link item-content panel-close"> Compañía </a> </li>
+                    <li class="accordion-item">
+                        <div class="item-title"><a href="#" class="item-content item-link"> Productos </a></div>
+                        <div class="accordion-item-content">
+                            <p><a href="./pescayola/" style="padding-left:25px;" class="item-link panel-close"> · Escayola-cola</a></p>
+                            <p><a href="./pcemento/" style="padding-left:25px;" class="item-link panel-close"> · Cemento-cola</a></p>
+                            <p><a href="./ptapajuntas/" style="padding-left:25px;" class="item-link panel-close"> · Tapajuntas sellantes</a></p>
+                            <p><a href="./pmorteros/" style="padding-left:25px;" class="item-link panel-close"> · Morteros</a></p>
+                            <p><a href="./ppastaniv/" style="padding-left:25px;" class="item-link panel-close"> · Pasta niveladora</a></p>
+                            <p><a href="./pimper/" style="padding-left:25px;" class="item-link panel-close"> · Impermeabilizantes</a></p>
+                            <p><a href="./potros/" style="padding-left:25px;" class="item-link panel-close"> · Otros Productos</a></p>
+                        </div>
+                    </li>
+                    <li class="accordion-item"><a href="./localizacion/" class="item-link item-content panel-close">Localización</a></li>
+                    <li class="accordion-item"><a href="./contacto/" class="item-link item-content panel-close">Contacto</a></li>
+                </ul>
+            </div>
+            <p> <a class="panel-close" href="#"> Cerrar panel lateral </a></p>
+        </div>
+    </div>
+    <div class="view view-main view-init">
+        <div class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <p>
+                            <a class="panel-open" href="#" data-panel="left">
+                                <button class="button" style="width:auto;margin-left:10px;">Menu</button>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img class="logoPapresa" src="img/logopapresa_sangre.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="block">
+                    <div class="card">
+                        <div class="card-header">Autres Produits</div>
+                        <div class="card-content card-content-padding" style="text-align:center">
+                            <hr>
+                            <!--<button class="button col link popup-open" data-popup=".popup-limpiacemf" style="height: 100%; width: 100%">
+                                <img src="img/sacos/limpiacem.jpg" style="width:40%;">
+                            </button>
+                            <p>Limpiacem</p>
+                            <hr>-->
+                            <button class="buton-special button col link popup-open" data-popup=".popup-yesof">
+                                <img src="img/sacos/yeso_de_fraguado_controlado.jpg" style="width:40%;">
+                            </button>
+                            <p>Contrôlée plâtre à prise BL / 15/2</p>
+                            <hr>
+                            <!--<button class="button col link popup-open" data-popup=".popup-yeso2f" style="height: 100%; width: 100%">
+                                <img src="img/sacos/yeso_de_proyectar_aligerado.png" style="width:40%;">
+                            </button>
+                            <p>Yeso de proyectar aligerado B4/50/2</p>
+                            <hr>-->
+                            <!--<button class="button col link popup-open" data-popup=".popup-yeso3f" style="height: 100%; width: 100%">
+                                <img src="img/sacos/yeso_grueso_normal.png" style="width:40%;">
+                            </button>
+                            <p>Yeso grueso normal YG B1/5/2</p>
+                            <hr>-->
+                            <button class="buton-special button col link popup-open" data-popup=".popup-hormigonf">
+                                <img src="img/sacos/hormigon_beton.jpg" style="width:40%;">
+                            </button>
+                            <p>Béton / gris sec</p>
+                            <!--<hr>
+                            <button class="button col link popup-open" data-popup=".popup-escayola1f" style="height: 100%; width: 100%">
+                                <img src="img/sacos/escayola_e30.jpg" style="width:40%;">
+                            </button>
+                            <p>Papresa Escayola Tipo A</p>-->
+                            <!--<hr>
+                            <button class="button col link popup-open" data-popup=".popup-shikkuif" style="height: 100%; width: 100%">
+                                <img src="img/sacos/shikkui.jpg" style="width:40%;">
+                            </button>
+                            <p>Papresa Shikkui (PAPREFIN)</p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="popup popup-limpiacemf">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img src="img/logopapresa_sangre.png" style="width:30%;margin-left:2%" /></div>
+                                <div class="right"> <a class="link popup-close" data-popup=".popup-limpiacemf">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <img src="img/sacos/limpiacem.jpg" style="width:40%;"> Limpiacem
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #adc4e5">
+                                        Limpiador de restos cementosos en superﬁcies cerámicos
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Adhesivo obturador impermeable ultrarápido para tapar fugas y poros de agua en 20 segundos.
+                                            <br>Impermeabilizador en interiores y exteriores, soportes de hormigón, revoques de cemento, mortero de cemento-cal, soleras de cemento y ﬁbrocemento, consiguiendo una impermeabilidad tipo A durante 10 días.
+                                            <br>
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Polvo gris monocomponente..</li>
+                                            <li type="square">Ultrarrápido (Fragua en 20 segundos).</li>
+                                            <li type="square">Impermeable.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja?</b></p>
+                                        <p>
+                                            Del soporte puede estar saliendo agua.
+                                            <br>La mezcla debe realizarse a mano, protegida por un guante de goma y el producto se aplicará ejerciendo una fuerte presión con la mano cuando empiece a calentarse y endurecer.
+                                            <br> Se recomienda mezclar la cantidad de producto que pueda usarse en 1 minuto.
+                                            <br>Si no hay impermeabilización, dar una segunda mano pasados 2 minutos.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Dónde se utiliza? </b></p>
+                                        <p> Este producto se utiliza para eliminar de las superﬁ cies cerámicas los restos de cemento o de productos cuya base sea el cemento, como colas o masillas para juntas. Se utiliza también para eliminar las eﬂ orescencias salinas y calcáreas que pueden aparecer sobre la superﬁ cie de rejuntado a base de cemento, o sobre un barro, especialmente con colocación tradicional.
+                                            <br>No usar sobre marmol.
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Líquido incoloro</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Garrafa de 5 litros</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento (en función de la absorción del fondo) </th>
+                                                <td>+/- 100 - 200 cc/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo de uso</th>
+                                                <td>5-10 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante a aplicación </th>
+                                                <td>min 5°C - max 32°C</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composition</b></p>
+                                        <p>Ciment gris
+                                            <br> Collagènes additifs principalement inorganiques.
+                                            <br> Accélérateurs de durcissement.
+                                        </p>
+                                        <hr>
+                                        <p> <b>Précautions</b></p>
+                                        <p>Les composants du produit ne sont pas toxiques.
+                                            <br> Il doit être travaillé avec gants, éviter l'inhalation et contact direct avec les yeux et la peau.
+                                            <br>Maintenir loin d'enfants et animaux.</p>
+                                        <hr>
+                                        <p> <b>Premiers secours</b></p>
+                                        <p>Peau: laver avec suffissament d'eau.
+                                            <br> Yeux: laver avec suffissament d'eau.
+                                            <br> Ingestion: Rincer avec de l'eau et boire suffisamment d'eau.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Cette fiche technique est rédigé selon nos connaissances et nos essais et ne suppose aucun engagement. Il est sous la responsabilité du client l’admission et le contrôle dans l’entrepôt ou lieu de la construction du distributeur, ainsi que l’élection du produit à être utilisé sur chaque cas. La responsabilité du fabricant est limitée à défauts de manufacturation et de la valeur de la marchandise, car il est hors de son contrôle le matériel électoral et les conditions de travail. Données techniques pour 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Demande de la fiche technique de >Papresa Fugacem<  &body=Cette email a été crée de manière automatique par l application de Papresa. ', '_system'); return false;">Pour recevoir la fiche technique de ce produit, cliquez ce link et envoyez l'email.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="popup popup-yesof">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png"/></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-yesof">Fermer</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/yeso_de_fraguado_controlado.jpg" style="width:40%;">Contrôlée plâtre à prise BL / 15/2</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>C'est quoi ce produit?</b></p>
+                                        <p>C'est un grand plâtre de construction et de consommer l'application de réglage manuel pour les travaux de finition à l'intérieur.
+                                            <br>Les utilisations typiques: 
+                                        </p>
+                                        <ul>
+                                            <li type="square">réunions farcis cloisons plafonds.</li>
+                                            <li type="square">remplissage sous-trames sur les portes et fenêtres </li>
+                                            <li type="square">Tapado slash. </li>
+                                            <li type="square">fixation des boîtes électriques. </li>
+                                            <li type="square">Intérieur plâtrage.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>Caractéristiques</b></p>
+                                        <ul>
+                                            <li type="square">Application facile.</li>
+                                            <li type="square">Durcissement lent. </li>
+                                            <li type="square">Faible retrait lors du séchage. </li>
+                                            <li type="square">Bonne maniabilité.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>Comment préparer la pâte?</b></p>
+                                        <ul>
+                                            <li type="square">Il est conseillé d'effectuer de petites quantités de pâtes, 3 de ciment pour 1 partie d'eau, pétrir vigoureusement et appliquer immédiatement. </li>
+                                            <li type="square">Ne pas ajouter de l'eau au produit qui est durcie continuer à l'utiliser. </li>
+                                            <li type="square">Ne pas ajouter quelque chose au produit qui ne est pas indiqué dans la cha fi.</li>
+                                        </ul>
+                                        <hr>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspect</th>
+                                                <td>Poudre blanche</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Présentation</th>
+                                                <td>Sac de 20 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>eau / plâtre</th>
+                                                <td>0,8</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Commence du fraguado</th>
+                                                <td>16-18 minutes</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Eau combinée</th>
+                                                <td>4,5 - 6 % </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Indice de pureté</th>
+                                                <td>75 - 80 %</td>
+                                            </tr>
+                                            <tr>
+                                                <th>finesse de broyage (tamis de 0,2 mm) </th>
+                                                <td> < 25% </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Résistance ﬂ exotraction </th>
+                                                <td>2,3 N/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>pH </th>
+                                                <td>7,8 </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Réaction au feu  </th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Stockage(à partir de la date de fabrication, à l'abri, dans un endroit sec)</th>
+                                                <td>12 mois</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composition</b></p>
+                                        <p>Plâtre
+                                            <br> Additifs 
+                                        </p>
+                                        <hr>
+                                        <p> <b>Précautions</b></p>
+                                        <p>Les composants du produit ne sont pas toxiques.
+                                            <br> Il doit être travaillé avec gants, éviter l'inhalation et contact direct avec les yeux et la peau.
+                                            <br>Maintenir loin d'enfants et animaux.</p>
+                                        <hr>
+                                        <p> <b>Premiers secours</b></p>
+                                        <p>Peau: laver avec suffissament d'eau.
+                                            <br> Yeux: laver avec suffissament d'eau.
+                                            <br> Ingestion: Rincer avec de l'eau et boire suffisamment d'eau.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Cette fiche technique est rédigé selon nos connaissances et nos essais et ne suppose aucun engagement. Il est sous la responsabilité du client l’admission et le contrôle dans l’entrepôt ou lieu de la construction du distributeur, ainsi que l’élection du produit à être utilisé sur chaque cas. La responsabilité du fabricant est limitée à défauts de manufacturation et de la valeur de la marchandise, car il est hors de son contrôle le matériel électoral et les conditions de travail. Données techniques pour 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Demande de la fiche technique de >Contrôlée plâtre à prise BL / 15/2<  &body=Cette email a été crée de manière automatique par l application de Papresa. ', '_system'); return false;">Pour recevoir la fiche technique de ce produit, cliquez ce link et envoyez l'email.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="popup popup-yeso2f">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img src="img/logopapresa_sangre.png" style="width:30%;margin-left:2%" /></div>
+                                <div class="right"> <a class="link popup-close" data-popup=".popup-yeso2f">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/yeso_de_proyectar_aligerado.png" style="width:40%;">Yeso de proyectar aligerado B4/50/2</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un yeso aligerado de construcción de aplicación mecánica y fraguado lento, para realizar trabajo de guarnecido en interiores.
+                                            <br>Usos más habituales:
+                                        </p>
+                                        <ul>
+                                            <li type="square">Realización de revestimentos interiores tanto horizontal como vertical.</li>
+                                            <li type="square">Guarnecidos en interiores, paredes y techos.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Fácil aplicación con máquina de proyectar.</li>
+                                            <li type="square">Fraguado lento.</li>
+                                            <li type="square">Mínima retracción tras el secado.</li>
+                                            <li type="square">Monocomponente.</li>
+                                            <li type="square">Aditivado con perlita, buen corrector térmico y acústico.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li>El producto se amasa con un 90% de agua, regulando la cantidad de agua para conseguir más o menos fl uidez, a gusto del profesional.</li>
+                                            <li>
+                                                Espesor medio de 10 a 15 mm.
+                                            </li>
+                                        </ol>
+                                        <hr>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Relación agua / yeso</th>
+                                                <td>1/1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Principio de fraguado</th>
+                                                <td>3 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua combinada</th>
+                                                <td>4 - 6 % </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Índice de pureza</th>
+                                                <td>75 - 80 %</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Finura de molido (tamiz 0,2 mm) </th>
+                                                <td>
+                                                    < 25% </td>
+                                            </tr>
+                                            <tr>
+                                                <th>pH </th>
+                                                <td>12 </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción frente al fuego </th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composition</b></p>
+                                        <p>Ciment gris
+                                            <br> Collagènes additifs principalement inorganiques.
+                                            <br> Accélérateurs de durcissement.
+                                        </p>
+                                        <hr>
+                                        <p> <b>Précautions</b></p>
+                                        <p>Les composants du produit ne sont pas toxiques.
+                                            <br> Il doit être travaillé avec gants, éviter l'inhalation et contact direct avec les yeux et la peau.
+                                            <br>Maintenir loin d'enfants et animaux.</p>
+                                        <hr>
+                                        <p> <b>Premiers secours</b></p>
+                                        <p>Peau: laver avec suffissament d'eau.
+                                            <br> Yeux: laver avec suffissament d'eau.
+                                            <br> Ingestion: Rincer avec de l'eau et boire suffisamment d'eau.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Cette fiche technique est rédigé selon nos connaissances et nos essais et ne suppose aucun engagement. Il est sous la responsabilité du client l’admission et le contrôle dans l’entrepôt ou lieu de la construction du distributeur, ainsi que l’élection du produit à être utilisé sur chaque cas. La responsabilité du fabricant est limitée à défauts de manufacturation et de la valeur de la marchandise, car il est hors de son contrôle le matériel électoral et les conditions de travail. Données techniques pour 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Demande de la fiche technique de >Papresa Fugacem<  &body=Cette email a été crée de manière automatique par l application de Papresa. ', '_system'); return false;">Pour recevoir la fiche technique de ce produit, cliquez ce link et envoyez l'email.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="popup popup-yeso3f">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img src="img/logopapresa_sangre.png" style="width:30%;margin-left:2%" /></div>
+                                <div class="right"> <a class="link popup-close" data-popup=".popup-yeso3f">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/yeso_grueso_normal.png" style="width:40%;">Yeso grueso normal YG B1/5/2</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un yeso grueso de construcción de aplicación manual y fraguado rápido.
+                                            <br>Usos más habituales:
+                                        </p>
+                                        <ul>
+                                            <li type="square">Sujeción de tabiques y ladrillos.</li>
+                                            <li type="square">Guarnecidos en interiores.</li>
+                                            <li type="square">Tapado de rozas</li>
+                                            <li type="square">Pasta de agarre de materiales de construcción en interiores.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Fácil aplicación manual.</li>
+                                            <li type="square">Fraguado rápido.</li>
+                                            <li type="square">Mínima retracción tras el secado.</li>
+                                            <li type="square">Monocomponente.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li>Espolvorear el yeso sobre el agua.</li>
+                                            <li>Amasar con batidor eléctrico o a mano hasta conseguir una pasta homogénea.</li>
+                                            <li>Dejar reposar unos minutos.</li>
+                                            <li>Aplicar manualmente.</li>
+                                        </ol>
+                                        <hr>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 20 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Relación agua / yeso</th>
+                                                <td>0,7</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Principio de fraguado</th>
+                                                <td>> 5 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua combinada</th>
+                                                <td>4 - 6 % </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Índice de pureza</th>
+                                                <td> >75%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Finura de molido (tamiz 0,2 mm) </th>
+                                                <td>
+                                                    < 25% </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia fl exotracción</th>
+                                                <td> >2 N/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>pH </th>
+                                                <td> >6 </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción frente al fuego </th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composition</b></p>
+                                        <p>Ciment gris
+                                            <br> Collagènes additifs principalement inorganiques.
+                                            <br> Accélérateurs de durcissement.
+                                        </p>
+                                        <hr>
+                                        <p> <b>Précautions</b></p>
+                                        <p>Les composants du produit ne sont pas toxiques.
+                                            <br> Il doit être travaillé avec gants, éviter l'inhalation et contact direct avec les yeux et la peau.
+                                            <br>Maintenir loin d'enfants et animaux.</p>
+                                        <hr>
+                                        <p> <b>Premiers secours</b></p>
+                                        <p>Peau: laver avec suffissament d'eau.
+                                            <br> Yeux: laver avec suffissament d'eau.
+                                            <br> Ingestion: Rincer avec de l'eau et boire suffisamment d'eau.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Cette fiche technique est rédigé selon nos connaissances et nos essais et ne suppose aucun engagement. Il est sous la responsabilité du client l’admission et le contrôle dans l’entrepôt ou lieu de la construction du distributeur, ainsi que l’élection du produit à être utilisé sur chaque cas. La responsabilité du fabricant est limitée à défauts de manufacturation et de la valeur de la marchandise, car il est hors de son contrôle le matériel électoral et les conditions de travail. Données techniques pour 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Demande de la fiche technique de >Papresa Fugacem<  &body=Cette email a été crée de manière automatique par l application de Papresa. ', '_system'); return false;">Pour recevoir la fiche technique de ce produit, cliquez ce link et envoyez l'email.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="popup popup-escayola1f">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img src="img/logopapresa_sangre.png" style="width:30%;margin-left:2%" /></div>
+                                <div class="right"> <a class="link popup-close" data-popup=".popup-escayola1f">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/escayola_e30.jpg" style="width:40%;">Papresa Escayola Tipo A</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un hemihidrato CaSO4 1/2H2O reducido a partir de un mineral natural de yeso. Se utiliza en la industria cerámica, fabricación de moldes y fabricación de productos decorativos. Se puede emplear como carga en fórmula de pintura plástica y como base en la formación de morteros de yeso y enlucidos.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Fácil aplicación manual.</li>
+                                            <li type="square">Fraguado lento.</li>
+                                            <li type="square">Mínima retracción tras el secado.</li>
+                                            <li type="square">Buena trabajabilidad.</li>
+                                            <li type="square">Los productos base yeso no son adecuados para exteriores. Almacenar en lugares secos. La absorción de humedad puede provocar cambios en sus propiedades físicas.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li>Espolvorear la escayola sobre el agua.</li>
+                                            <li>Los cambios en las proporciones escayola-agua influirán en el rendimiento del producto, como el tiempo de fraguado y la resistencia.</li>
+                                            <li>Dejar reposar unos minutos.</li>
+                                            <li>Aplicar manualmente mediante espátula o llana.</li>
+                                        </ol>
+                                        <hr>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Relación agua / yeso</th>
+                                                <td>0,75</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Principio de fraguado</th>
+                                                <td> 6 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Final de fraguado</th>
+                                                <td> 25 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua combinada</th>
+                                                <td>
+                                                    < 7 % </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Índice de pureza</th>
+                                                <td> >90%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Finura de molido (tamiz 0,2 mm) </th>
+                                                <td>
+                                                    < 5% </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia flexotracción</th>
+                                                <td> >3,0 N/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>pH </th>
+                                                <td> >6 </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción frente al fuego </th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composition</b></p>
+                                        <p>Ciment gris
+                                            <br> Collagènes additifs principalement inorganiques.
+                                            <br> Accélérateurs de durcissement.
+                                        </p>
+                                        <hr>
+                                        <p> <b>Précautions</b></p>
+                                        <p>Les composants du produit ne sont pas toxiques.
+                                            <br> Il doit être travaillé avec gants, éviter l'inhalation et contact direct avec les yeux et la peau.
+                                            <br>Maintenir loin d'enfants et animaux.</p>
+                                        <hr>
+                                        <p> <b>Premiers secours</b></p>
+                                        <p>Peau: laver avec suffissament d'eau.
+                                            <br> Yeux: laver avec suffissament d'eau.
+                                            <br> Ingestion: Rincer avec de l'eau et boire suffisamment d'eau.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Cette fiche technique est rédigé selon nos connaissances et nos essais et ne suppose aucun engagement. Il est sous la responsabilité du client l’admission et le contrôle dans l’entrepôt ou lieu de la construction du distributeur, ainsi que l’élection du produit à être utilisé sur chaque cas. La responsabilité du fabricant est limitée à défauts de manufacturation et de la valeur de la marchandise, car il est hors de son contrôle le matériel électoral et les conditions de travail. Données techniques pour 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Demande de la fiche technique de >Papresa Fugacem<  &body=Cette email a été crée de manière automatique par l application de Papresa. ', '_system'); return false;">Pour recevoir la fiche technique de ce produit, cliquez ce link et envoyez l'email.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="popup popup-shikkuif">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img src="img/logopapresa_sangre.png" style="width:42%;margin-left:2%" /></div>
+                                <div class="right"> <a class="link popup-close" data-popup="popup-shikkuif">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/shikkui.jpg" style="width:40%;">Papresa Shikkui (PAPREFIN)</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #f9a51b">
+                                        Pasta blanca para renovación de paredes, fácil de lijar
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es una pasta en polvo, para alisado de paredes en interiores: Cubrir gotelé o renovar superficies rugosas o picadas, previo a la aplicación de pintura.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Fácil aplicación manual.</li>
+                                            <li type="square">Extra blancura.</li>
+                                            <li type="square">Excelente nivel de cobertura.</li>
+                                            <li type="square">Fácil de lijar</li>
+                                            <li type="square">Producto para capa fina hasta 7 mm.</li>
+                                            <li type="square">Perfecto para nivelación de paredes </li>
+                                            <li type="square">Monocomponente</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ul>
+                                            <li>Este producto está diseñado para su aplicación manual</li>
+                                            <li>Mezclar PAPREFIN con alrededor un 40% de agua (Aproximadamente 5-5,5 litros de agua por cada saco de 20 kg.), con mezcladora eléctrica hasta conseguir una pasta homogénea.</li>
+                                            <li>Dejar reposar la masa 5 minutos y después aplicar.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo usar PAPREFIN?</b></p>
+                                        <ul>
+                                            <li type="square">Antes que nada, asegurarse de que el soporte está libre de polvo, grasa, salitre, hongos o cualquier materia que pudiese afectar la adherencia del producto a la pared.</li>
+                                            <li type="square">En caso de duda, aplicar una imprimación de ADESILATEX para asegurar el soporte. </li>
+                                            <li type="square"> Aplicar siempre de abajo hacia arriba, procurando que la capa resultante cubra todos los desperfectos, obteniendo una superficie lo más lisa posible.</li>
+                                            <li type="square"> Una vez secado el producto, lijar cualquier posible imperfección hasta un acabado perfecto.</li>
+                                            <li type="square"> Aplicar la pintura sobre el PAPREFIN ya seco.</li>
+                                            <li type="square">Para una segunda mano, esperar 24 horas.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Dónde se utiliza?</b></p>
+                                        <ul>
+                                            <li type="square">Gotelé</li>
+                                            <li type="square">Pintura</li>
+                                            <li type="square">Yesos y escayolas</li>
+                                            <li type="square">Placas de cartón-yeso</li>
+                                            <li type="square">PAPRESA ENLUCIDO</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 20 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento</th>
+                                                <td>6-7 kg/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de mezcla</th>
+                                                <td>+/- 25%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de capa</th>
+                                                <td>1-6 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo abierto</th>
+                                                <td>20 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Densidad</th>
+                                                <td>1505 kg/m3</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia sobre ladrillo</th>
+                                                <td>1,8 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia sobre hormigón </th>
+                                                <td>2,1 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia a la compresión</th>
+                                                <td>20,7 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Coeficiente de absorción de agua</th>
+                                                <td>0,1 kg/m2 x min0,5</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Absorción de agua a 24 horas </th>
+                                                <td>3,8%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Permeabilidad al vapor de agua </th>
+                                                <td>μ = 8,2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura para aplicación</th>
+                                                <td>min 3ºC, max 30ºC</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción al fuego</th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composition</b></p>
+                                        <p>Ciment gris
+                                            <br> Collagènes additifs principalement inorganiques.
+                                            <br> Accélérateurs de durcissement.
+                                        </p>
+                                        <hr>
+                                        <p> <b>Précautions</b></p>
+                                        <p>Les composants du produit ne sont pas toxiques.
+                                            <br> Il doit être travaillé avec gants, éviter l'inhalation et contact direct avec les yeux et la peau.
+                                            <br>Maintenir loin d'enfants et animaux.</p>
+                                        <hr>
+                                        <p> <b>Premiers secours</b></p>
+                                        <p>Peau: laver avec suffissament d'eau.
+                                            <br> Yeux: laver avec suffissament d'eau.
+                                            <br> Ingestion: Rincer avec de l'eau et boire suffisamment d'eau.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Cette fiche technique est rédigé selon nos connaissances et nos essais et ne suppose aucun engagement. Il est sous la responsabilité du client l’admission et le contrôle dans l’entrepôt ou lieu de la construction du distributeur, ainsi que l’élection du produit à être utilisé sur chaque cas. La responsabilité du fabricant est limitée à défauts de manufacturation et de la valeur de la marchandise, car il est hors de son contrôle le matériel électoral et les conditions de travail. Données techniques pour 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Demande de la fiche technique de >Papresa Fugacem<  &body=Cette email a été crée de manière automatique par l application de Papresa. ', '_system'); return false;">Pour recevoir la fiche technique de ce produit, cliquez ce link et envoyez l'email.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="popup popup-hormigonf">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png"/></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-hormigonf">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <img src="img/sacos/hormigon_beton.jpg" style="width:40%;"> Béton / gris sec</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #333;color: white">
+                                        Béton prêt pour pétrir travail
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>C'est quoi ce produit?</b></p>
+                                        <p>C'est un grand plâtre de construction et de consommer l'application de réglage manuel pour les travaux de finition à l'intérieur.
+                                            <br>Les utilisations typiques: 
+                                        </p>
+                                        <ul>
+                                            <li type="square">Réunions farcis cloisons plafonds </li>
+                                            <li type="square">Remplissage sous-trames sur les portes et fenêtres </li>
+                                            <li type="square">Tapado slash.</li>
+                                            <li type="square">fixation des boîtes électriques. </li>
+                                            <li type="square">Intérieur plâtrage.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>Caractéristiques</b></p>
+                                        <ul>
+                                            <li type="square">Application facile.</li>
+                                            <li type="square">Durcissement lent. </li>
+                                            <li type="square">Faible retrait lors du séchage. </li>
+                                            <li type="square">Bonne maniabilité.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>Comment préparer la pâte?</b></p>
+                                        <ol>
+                                            <li>Saupoudrer le plâtre sur l'eau. </li>
+                                            <li>Mélanger au batteur électrique jusqu'à obtenir une pâte lisse. </li>
+                                            <li> Laisser reposer quelques minutes.</li>
+                                            <li>Appliquer manuellement à la spatule ou à la truelle.</li>
+                                        </ol>
+                                        <hr>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Données techniques</p>
+                                        <table class="egt" rules="rows">
+                                            tr>
+                                                <th>Aspect</th>
+                                                <td>Poudre blanche</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Présentation</th>
+                                                <td>Sac de 20 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>eau / plâtre</th>
+                                                <td>0,8</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Commence du fraguado</th>
+                                                <td>16-18 minutes</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Eau combinée</th>
+                                                <td>4,5 - 6 % </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Indice de pureté</th>
+                                                <td>75 - 80 %</td>
+                                            </tr>
+                                            <tr>
+                                                <th>finesse de broyage (tamis de 0,2 mm) </th>
+                                                <td> < 25% </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Résistance ﬂ exotraction </th>
+                                                <td>2,3 N/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>pH </th>
+                                                <td>7,8 </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Réaction au feu  </th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Stockage(à partir de la date de fabrication, à l'abri, dans un endroit sec)</th>
+                                                <td>12 mois</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composition</b></p>
+                                        <p>Plâtre
+                                            <br> Additifs.
+                                        </p>
+                                        <hr>
+                                        <p> <b>Précautions</b></p>
+                                        <p>Les composants du produit ne sont pas toxiques.
+                                            <br> Il doit être travaillé avec gants, éviter l'inhalation et contact direct avec les yeux et la peau.
+                                            <br>Maintenir loin d'enfants et animaux.</p>
+                                        <hr>
+                                        <p> <b>Premiers secours</b></p>
+                                        <p>Peau: laver avec suffissament d'eau.
+                                            <br> Yeux: laver avec suffissament d'eau.
+                                            <br> Ingestion: Rincer avec de l'eau et boire suffisamment d'eau.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Cette fiche technique est rédigé selon nos connaissances et nos essais et ne suppose aucun engagement. Il est sous la responsabilité du client l’admission et le contrôle dans l’entrepôt ou lieu de la construction du distributeur, ainsi que l’élection du produit à être utilisé sur chaque cas. La responsabilité du fabricant est limitée à défauts de manufacturation et de la valeur de la marchandise, car il est hors de son contrôle le matériel électoral et les conditions de travail. Données techniques pour 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Demande de la fiche technique de >Béton / gris sec<  &body=Cette email a été crée de manière automatique par l application de Papresa. ', '_system'); return false;">Pour recevoir la fiche technique de ce produit, cliquez ce link et envoyez l'email.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="./framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="./js/my-app.js"></script>
+</div>

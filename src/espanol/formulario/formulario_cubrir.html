@@ -1,0 +1,231 @@
+<div id="app">
+    <!--
+    <div class="panel panel-left panel-reveal">
+        <div class="block">
+            <div class="block-title">Bienvenido!</div>
+            <div class="list accordion-list">
+                <ul>
+                    <li class="accordion-item"><a href="/index/" class="item-link item-content panel-close">Inicio</a></li>
+                    <li class="accordion-item"><a href="/compania/" class="item-link item-content panel-close"> Compañía </a> </li>
+                    <li class="accordion-item"><a href="/formulario_index/" class="item-link item-content panel-close"> Formulario </a> </li>
+                    <li class="accordion-item">
+                        <div class="item-title"><a href="#" class="item-content item-link"> Productos </a></div>
+                        <div class="accordion-item-content">
+                            <p><a href="/pescayola/" style="padding-left:25px;" class="item-link panel-close"> · Escayola-cola</a></p>
+                            <p><a href="/pcemento/" style="padding-left:25px;" class="item-link panel-close"> · Cemento-cola</a></p>
+                            <p><a href="/ptapajuntas/" style="padding-left:25px;" class="item-link panel-close"> · Tapajuntas sellantes</a></p>
+                            <p><a href="/pmorteros/" style="padding-left:25px;" class="item-link panel-close"> · Morteros</a></p>
+                            <p><a href="/ppastaniv/" style="padding-left:25px;" class="item-link panel-close"> · Pasta niveladora</a></p>
+                            <p><a href="/pimper/" style="padding-left:25px;" class="item-link panel-close"> · Impermeabilizantes</a></p>
+                            <p><a href="/potros/" style="padding-left:25px;" class="item-link panel-close"> · Otros Productos</a></p>
+                        </div>
+                    </li>
+                    <li class="accordion-item"><a href="/localizacion/" class="item-link item-content panel-close">Localización</a></li>
+                    <li class="accordion-item"><a href="/contacto/" class="item-link item-content panel-close">Contacto</a></li>
+                </ul>
+            </div>
+            <p> <a class="panel-close" href="#"> Cerrar panel lateral </a></p>
+        </div>
+    </div>-->
+    <div class="view view-main view-init">
+        <div class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left" style="margin-right: 3px;">
+                        <p>
+                            <a class="link back" href="#">
+                                <button class="button" style="width:auto;">Back</button>
+                            </a>
+                        </p>
+                    </div>
+                    <!--<div class="title" style="font-size:16px">CUBRIR FISURAS EN LA PARED</div>-->
+                    <div class="right">
+                        <img class="logoPapresa" src="img/logopapresa_sangre.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="block">
+                    <!--<a class="link back" style="color: white;">-->
+                    <div class="elevation-demo elevation-13 task-fijada">
+                        <p style ="margin:0;padding:4%">CUBRIR FISURAS EN LA PARED</p>
+                    </div>
+                    <!--</a>-->
+                    <hr class="myHR">
+                    <!--#2196f3b0-->
+                    <div class="card" style="margin-top: 25px;">
+                        <div class="card-header">Pared</div>
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <div class="list inset">
+                                <ul>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Altura de la pared en metros</div>
+                                                <input type="number" id="altura" placeholder="24">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Ancho de la pared en metros</div>
+                                                <input type="number" id="ancho" placeholder="42">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="col button button-fill cubrirButton" href="#" style="width: 100px;margin: auto;border-radius: 20px">Calcular
+                    </button>
+                    <div class="card" id="result" style="display:none">
+                        <div class="card-header">Resultado</div>
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <h3 id='resultado' style="margin-top: 0"></h3>
+                            <hr>
+                            <button class="buton-special button col link popup-open" data-popup=".popup-paprelastic">
+                                <!--<img src="img/sacos/pasta_de_juntas_normal.jpg" style="width:60%;">-->
+                                <p style="BORDER: 1PX SOLID #2196f3;border-radius: 20px;color: black;">PAPRELASTIC</p>
+                            </button>
+                            <hr>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-paprelastic">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png" /></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-paprelastic">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <!--<img src="img/sacos/pasta_de_juntas_normal.jpg" style="width:50%;">-->
+                                        <p style="margin:auto;">PAPRELASTIC</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #71c69c">
+                                        Pasta elástica de revestimiento
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Paprelastic es una pasta especial flexible lista para su uso, especialmente indicada para el relleno de fisuras y pequeñas grietas de fraguado en yesos y cementos evitando su reaparición. Rellena fisuras y poros, dejando acabados uniformes con la posibilidad de pintar encima. Cubre desconchones.
+                                            <br> Producto también adecuado para superficies con base yeso, cemento, hormigón, etc que tengan posibilidad de fisuras, microfisuras, grietas o poros; aplicándose en toda la superficie en paños grandes y evitando la aparición visual posterior gracias a sus especiales características de adaptabilidad y flexibilidad.
+                                            <br> Paprelastic está especialmente indicado para la renovación directa de paredes, pudiendo cubrir azulejos y evitando eliminarlos, dejando la superficie lista para pintar. Apropiado para habitaciones húmedas como baños y cocinas.
+                                            <br> Producto adhesivo: Une materiales de distinta naturaleza o grado de absorción.
+                                            <br> Producto adecuado para el relleno de juntas de dilatación (Hasta 2 mm).
+                                            <br> Aplicar con llana lisa o espátula
+                                            <hr>
+                                            <p> <b>¿Cuáles son sus características?</b></p>
+                                            <ul>
+                                                <li type="square">Alta capacidad de relleno.</li>
+                                                <li type="square">Elástico.</li>
+                                                <li type="square">Impermeable.</li>
+                                                <li type="square">Buena trabajabilidad.</li>
+                                                <li type="square">Elevado poder de relleno en fisuras.</li>
+                                                <li type="square">Monocomponente.</li>
+                                                <li type="square">Gran adherencia sobre todo tipo de superficies.</li>
+                                                <li type="square">Interior y exterior.</li>
+                                                <li type="square">Alto poder fungicida.</li>
+                                                <li type="square">En capa fina, listo para pintar en 6-8 horas.</li>
+                                            </ul>
+                                            <hr>
+                                            <p> <b>¿Sobre qué tipo de soportes se utiliza?</b></p>
+                                            <ul>
+                                                <li type="square">Morteros de cemento.</li>
+                                                <li type="square">Hormigón.</li>
+                                                <li type="square">Guarnecidos de yeso.</li>
+                                                <li type="square">Ladrillos porosos.</li>
+                                                <li type="square">Fachadas.</li>
+                                                <li type="square">Pintura elástica.</li>
+                                                <li type="square">Piedra.</li>
+                                                <li type="square">Azulejo.</li>
+                                            </ul>
+                                            <br> Se debe esperar al total fraguado del soporte. El soporte debe estar limpio y seco, libres de polvo o grasa.
+                                            <br> No utilizar sobre hierro o madera.
+                                            <br> No utilizar con temperaturas inferiores a 5ºC.
+                                            <hr>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Pasta Blanca</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Bote 1 kg</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Peso específico</th>
+                                                <td>1,6 kg / l</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento en fisuras (2 mm)</th>
+                                                <td>8-10 m2 / l</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento en paño capa fina (1 mm grosor)</th>
+                                                <td>4 m2 / l</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Disolvente para dilución y limpieza</th>
+                                                <td>Agua</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Secado</th>
+                                                <td>6-8 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Sólidos en volumen</th>
+                                                <td>62 ± 1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Sólidos en peso</th>
+                                                <td>74 ± 1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación y al abrigo de la humedad)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <br> Resinas.
+                                        <br> Aditivos.
+                                        <br> Sólidos en suspensión</p>
+                                        <hr>
+                                        <p> <b>Precauciones</b></p>
+                                        <p>Los componentes del producto no son tóxicos.
+                                            <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                            <br> Alejarlo del alcance de niños y animales.</p>
+                                        <hr>
+                                        <p> <b>Primeros Auxilios</b></p>
+                                        <p>Piel: Lavar con abundante agua.
+                                            <br> Ojos: Lavar con abundante agua.
+                                            <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >PAPRELASTIC< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

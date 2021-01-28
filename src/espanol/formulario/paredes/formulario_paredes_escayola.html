@@ -1,0 +1,267 @@
+<div id="app">
+    <!--
+    <div class="panel panel-left panel-reveal">
+        <div class="block">
+            <div class="block-title">Bienvenido!</div>
+            <div class="list accordion-list">
+                <ul>
+                    <li class="accordion-item"><a href="/index/" class="item-link item-content panel-close">Inicio</a></li>
+                    <li class="accordion-item"><a href="/compania/" class="item-link item-content panel-close"> Compañía </a> </li>
+                    <li class="accordion-item"><a href="/formulario_index/" class="item-link item-content panel-close"> Formulario </a> </li>
+                    <li class="accordion-item">
+                        <div class="item-title"><a href="#" class="item-content item-link"> Productos </a></div>
+                        <div class="accordion-item-content">
+                            <p><a href="/pescayola/" style="padding-left:25px;" class="item-link panel-close"> · Escayola-cola</a></p>
+                            <p><a href="/pcemento/" style="padding-left:25px;" class="item-link panel-close"> · Cemento-cola</a></p>
+                            <p><a href="/ptapajuntas/" style="padding-left:25px;" class="item-link panel-close"> · Tapajuntas sellantes</a></p>
+                            <p><a href="/pmorteros/" style="padding-left:25px;" class="item-link panel-close"> · Morteros</a></p>
+                            <p><a href="/ppastaniv/" style="padding-left:25px;" class="item-link panel-close"> · Pasta niveladora</a></p>
+                            <p><a href="/pimper/" style="padding-left:25px;" class="item-link panel-close"> · Impermeabilizantes</a></p>
+                            <p><a href="/potros/" style="padding-left:25px;" class="item-link panel-close"> · Otros Productos</a></p>
+                        </div>
+                    </li>
+                    <li class="accordion-item"><a href="/localizacion/" class="item-link item-content panel-close">Localización</a></li>
+                    <li class="accordion-item"><a href="/contacto/" class="item-link item-content panel-close">Contacto</a></li>
+                </ul>
+            </div>
+            <p> <a class="panel-close" href="#"> Cerrar panel lateral </a></p>
+        </div>
+    </div>-->
+    <div class="view view-main view-init">
+        <div class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left" style="margin-right: 3px;">
+                        <p>
+                            <a class="link back" href="#">
+                                <button class="button" style="width:auto;">Back</button>
+                            </a>
+                        </p>
+                    </div>
+                    <!--<div class="title" style="font-size:16px">CUBRIR FISURAS EN LA PARED</div>-->
+                    <div class="right">
+                        <img class="logoPapresa" src="img/logopapresa_sangre.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="block">
+                    <!--<a class="link back" style="color: white;">-->
+                        <div class="elevation-demo elevation-13 task-fijada">
+                            <p style ="margin:0;padding:4%">CONSTRUIR PAREDES <br> > TABIQUE DE ESCAYOLA</p>
+                        </div>
+                    <!--</a>-->
+                    <hr class="myHR">
+                    <!--#2196f3b0-->
+                    <div class="card" style="margin-top: 25px;">
+                        <div class="card-header">Pared</div>
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <div class="list inset">
+                                <ul>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Altura de la pared en metros</div>
+                                                <input type="number" id="altura" placeholder="24">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Ancho de la pared en metros</div>
+                                                <input type="number" id="ancho" placeholder="42">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="col button button-fill escayolaPareButton" href="#" style="width: 100px;margin: auto;border-radius: 20px">Calcular
+                    </button>
+                    <div class="card" id="result" style="display:none">
+                        <div class="card-header">Resultado</div>
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <h3 id='resultado' style="margin-top: 0"></h3>
+                            <hr>
+                            <button class="buton-special button col link popup-open" data-popup=".popup-tabique">
+                                <img src="img/sacos/papresa_tabique.jpg" style="width:46%;">
+                            </button>
+                            <p style="text-align: center;">Papresa tabique pasta de agarre "T"</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-tabique">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png"/></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-tabique">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <img src="img/sacos/papresa_tabique.jpg" style="width:46%;margin-left: 15px;">Papresa tabique pasta de agarre "T"</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: yellow">
+                                        Pegamento profesional para la colocación de tabiquería
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Papresa tabique es un pegamento con base escayola - cola que sirve para la colocación de:
+                                            <br> </p>
+                                        <ul>
+                                            <li type="square">Ladrillo de gran formato.</li>
+                                            <li type="square">Placas de yeso laminado.</li>
+                                            <li type="square">Ladrillo revestido de yeso.</li>
+                                            <li type="square">Molduras - azulejos.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Excelente trabajabilidad.</li>
+                                            <li type="square">Alto rendimiento.</li>
+                                            <li type="square">Espesamiento idóneo para la colocación de tabiquería.</li>
+                                            <li type="square">Mínima retracción de juntas.</li>
+                                            <li type="square">Gran resistencia a la compresión y ﬂexión.</li>
+                                            <li type="square">Monocomponente, sin descuelgue.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li value="1">Verter en una gaveta el agua y luego el producto en proporción aprox. de 17 litros por cada 25 kgs.</li>
+                                            <li>Batir a mano o con máquina (mejor lenta, 500 rpm) hasta conseguir una pasta homogénea.</li>
+                                            <li>Dejar reposar 5 minutos para que actúen correctamente los aditivos.</li>
+                                        </ol>
+                                        <p>Notas: Un exceso de batido puede dar lugar a una aceleración del fraguado.
+                                            <br> No usar más agua de la recomendada ni añadir más agua después de dejar reposar la masa.
+                                            <br> </p>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> TABIQUERÍAS DE LADRILLO DE GRAN FORMATO.
+                                            <br> Colocar sobre el forjado una tira de EPS encolada por la cara superior.
+                                            <br> Fijada la primera ﬁ la, con el macho hacia arriba, aplicar pegamento en el macho y encolar los laterales.
+                                            <br> Colocar los paneles asentándolos con un mazo de goma.
+                                            <br> La unión del techo se realiza con una mezcla de pasta de agarre, yeso y una tira de EPS.
+                                            <br> La unión con los laterales del gran formato, siempre con tiras de EPS (Sobre ladrillos, pilares...).
+                                            <br> Todas las tiras de EPS han de sobresalir 2 cm a cada lado y quedar limpias.
+                                            <br>Limpiar las juntas a la media hora de la colocación.
+                                        </p>
+                                        <p> TABIQUERÍAS DE PLACA DE YESO LAMINADO (PYL)
+                                            <br> Presentar las placas de yeso laminado sobre el tabique de ladrillo.
+                                            <br> Preparar la pasta de agarre y las placas recortando enchufes, etc.
+                                            <br> Con una llana dentada 10-15 aplicar la pasta de agarre sobre el tabique.
+                                            <br> Pegar las placas sobre el tabique, presionando para macizar la pared.
+                                            <br>Limpiar los sobrantes de pasta.
+                                            <br>Aplicar y rellenar las juntas con cinta y <a href="/ptapajuntas/" class="popup-close">pasta de juntas Papresa.</a>
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Dónde se utiliza? </b></p>
+                                        <p>Cerámica de gran formato, placas de yeso laminado, ladrillo revestido de yeso, tabiquería yeso-escayola, en interiores, baldas de estanterías de escayola y paredes guarnecidas de yeso.
+                                            <br> No utilizar: En exteriores.
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 25 kgs y 5 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento con ladrillo gran formato</th>
+                                                <td>3-4 kgs/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento con PYL</th>
+                                                <td>3 kgs/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de Mezcla</th>
+                                                <td>17 litros por cada 25 kg</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo abierto</th>
+                                                <td>1 hora</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo de fraguado</th>
+                                                <td>2 hora</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo de espera para enlucir</th>
+                                                <td>4-6 hora</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante aplicación</th>
+                                                <td>min 5ºC, max 32ºC</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia térmica </th>
+                                                <td>de -5ºC a 80ºC</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Envejecimiento del producto</th>
+                                                <td>no en 50 años</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Densidad de la masa</th>
+                                                <td>1,2 gr/cm3</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia a la compresión según la norma UNE 102031:1999</th>
+                                                <td>7 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción frente al fuego</th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia según norma UNE EN 12860</th>
+                                                <td>Conforme</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación y al abrigo de la humedad)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Escayola de riqueza superior a un 95% de sulfato cálcico.
+                                            <br> Aditivos orgánicos e inorgánicos.
+                                            <br> Plastiﬁcantes e impermeabilizantes.</p>
+                                        <hr>
+                                        <p> <b>Precauciones</b></p>
+                                        <p>Los componentes del producto no son tóxicos.
+                                            <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                            <br> </p>
+                                        <hr>
+                                        <p> <b>Primeros Auxilios</b></p>
+                                        <p>Piel: Lavar con abundante agua.
+                                            <br> Ojos: Lavar con abundante agua.
+                                            <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Papresa tabique pasta de agarre T< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

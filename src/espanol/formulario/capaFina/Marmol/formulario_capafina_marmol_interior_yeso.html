@@ -1,0 +1,905 @@
+<div id="app">
+    <!--
+    <div class="panel panel-left panel-reveal">
+        <div class="block">
+            <div class="block-title">Bienvenido!</div>
+            <div class="list accordion-list">
+                <ul>
+                    <li class="accordion-item"><a href="/index/" class="item-link item-content panel-close">Inicio</a></li>
+                    <li class="accordion-item"><a href="/compania/" class="item-link item-content panel-close"> Compañía </a> </li>
+                    <li class="accordion-item"><a href="/formulario_index/" class="item-link item-content panel-close"> Formulario </a> </li>
+                    <li class="accordion-item">
+                        <div class="item-title"><a href="#" class="item-content item-link"> Productos </a></div>
+                        <div class="accordion-item-content">
+                            <p><a href="/pescayola/" style="padding-left:25px;" class="item-link panel-close"> · Escayola-cola</a></p>
+                            <p><a href="/pcemento/" style="padding-left:25px;" class="item-link panel-close"> · Cemento-cola</a></p>
+                            <p><a href="/ptapajuntas/" style="padding-left:25px;" class="item-link panel-close"> · Tapajuntas sellantes</a></p>
+                            <p><a href="/pmorteros/" style="padding-left:25px;" class="item-link panel-close"> · Morteros</a></p>
+                            <p><a href="/ppastaniv/" style="padding-left:25px;" class="item-link panel-close"> · Pasta niveladora</a></p>
+                            <p><a href="/pimper/" style="padding-left:25px;" class="item-link panel-close"> · Impermeabilizantes</a></p>
+                            <p><a href="/potros/" style="padding-left:25px;" class="item-link panel-close"> · Otros Productos</a></p>
+                        </div>
+                    </li>
+                    <li class="accordion-item"><a href="/localizacion/" class="item-link item-content panel-close">Localización</a></li>
+                    <li class="accordion-item"><a href="/contacto/" class="item-link item-content panel-close">Contacto</a></li>
+                </ul>
+            </div>
+            <p> <a class="panel-close" href="#"> Cerrar panel lateral </a></p>
+        </div>
+    </div>-->
+    <div class="view view-main view-init">
+        <div class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left" style="margin-right: 3px;">
+                        <p>
+                            <a class="link back" href="#">
+                                <button class="button" style="width:auto;">Back</button>
+                            </a>
+                        </p>
+                    </div>
+                    <!--<div class="title" style="font-size:16px">CUBRIR FISURAS EN LA PARED</div>-->
+                    <div class="right">
+                        <img class="logoPapresa" src="img/logopapresa_sangre.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="block">
+                    <!--<a class="link back" style="color: white;">-->
+                    <div class="elevation-demo elevation-13 task-fijada">
+                        <p style="margin:0;padding:4%">FIJACIÓN DE CERÁMICA EN CAPA FINA
+                            <br> > MÁRMOL
+                            <br> > INTERIOR
+                            <br> > SOBRE YESO / PYL</p>
+                    </div>
+                    <!--</a>-->
+                    <hr class="myHR">
+                    <!--#2196f3b0-->
+                    <div class="card" style="margin-top: 25px;">
+                        <div class="card-header">Pared</div>
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <div class="list inset">
+                                <ul>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Largo de la pared en metros</div>
+                                                <input type="number" id="altura" placeholder="24">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Ancho de la pared en metros</div>
+                                                <input type="number" id="ancho" placeholder="42">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="col button button-fill paredHorExtMarmolFinaButton" href="#" style="width: 100px;margin: auto;border-radius: 20px">Calcular
+                    </button>
+                    <div class="card" id="result" style="display:none">
+                        <div class="card-header">Resultado</div>
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <h3 id='resultado1' style="margin-top: 0"></h3>
+                            <button class="buton-special button col link popup-open" data-popup=".popup-panzerg">
+                                <img src="img/sacos/panzer_flex_gris_blanco.jpg" style="width:40%;">
+                            </button>
+                            <p style="text-align: center;">Cemento cola panzer flex (C2TE)</p>
+                            <hr>
+                            <h4 id="resultado2" style="margin-top: 0"></h4>
+                            <hr>
+                            <button class="buton-special button col link popup-open" data-popup=".popup-paneze">
+                                <img src="img/sacos/panzer_extraflex.jpg" style="width:40%;">
+                            </button>
+                            <p style="text-align: center;">Cemento cola panzer extraflex (C2TE-S1)</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-paneze">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png" /></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-paneze">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/panzer_extraflex.jpg" style="width:40%;">Cemento cola panzer extraflex (C2TE-S1)</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #ee1d23; color: white">
+                                        Mortero-cola de altas prestaciones para alicatado, ensolado de porcelánicos y suelos radiantes
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Mortero cola de altas prestaciones con aditivos que aumentan la resistencia y proporcionan un alto grado de elasticidad e impermeabilidad.
+                                            <br>Indicado para la colocación de revestimientos de baja absorción: Porcelánicos, mármoles, cerámicos de gran formato y suelos radiantes.</p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Monocomponente.</li>
+                                            <li type="square">Deslizamiento vertical nulo.</li>
+                                            <li type="square">Aplicación en capa fina.</li>
+                                            <li type="square">Excelente trabajabilidad.</li>
+                                            <li type="square">Gran resistencia a las heladas y alto grado de impermeabilidad.</li>
+                                            <li type="square">Fabricado a base de resinas sintéticas, plastiﬁcantes y espesantes.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li value="1">Verter primero el agua y luego el mortero-cola.</li>
+                                            <li>Amasar en gavetas en proporción aproximada de 6 a 7 litros cada 25 kgs.</li>
+                                            <li>Es muy importante no añadir más agua que la recomendada, puesto que mermarían las condiciones físicas y químicas del producto.
+                                            </li>
+                                            <li>Batir manualmente o con batidora (mejor lenta, 500 rpm) hasta conseguir una pasta homogénea.
+                                            </li>
+                                            <li>Dejar reposar durante 5 minutos antes de aplicar, para que actúen correctamente los aditivos y luego mezclar nuevamente antes de usar.
+                                            </li>
+                                            <li> Nunca añadir agua después de dejar reposar la masa.
+                                            </li>
+                                        </ol>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> El soporte debe estar limpio y seco.
+                                            <br>Extender el producto con la parte lisa de la llana para asegurar un contacto completo con el fondo de colocación.
+                                            <br>Aplicar la llana dentada (nº6-8) en paños no superiores a 1,5 - 2 m2.
+                                            <br>Comprobar que no se forme una película superﬁcial sobre el adhesivo (en tal caso es suﬁciente pasar la llana con un poco de producto fresco).
+                                            <br>Colocar la cerámica dejando juntas de 2-3 mm.
+                                            <br>
+                                            <br>Recomendamos:
+                                        </p>
+                                        <ul>
+                                            <li type="square">Dejar juntas de dilatación de 3 mm en los extremos de paños verticales (en paños largos cada 3 ml).</li>
+                                            <li>En ensolados dejar juntas perimetrales de 6 mm (en paños largos cada 5 metros lineales).</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>Dónde se utiliza? </b></p>
+                                        <p> Colocación de material cerámico en interior y exterior, en paredes y pavimentos.
+                                            <br>Fondo de colocación: Hormigón, revoques de cemento, mortero de cementocal, soleras de cemento, suelos radiantes, azulejo antiguo, piscinas, tabiquería PYL.
+                                            <br>Los fondos deben ser sólidos, limpios y secos, sin grietas ni deformaciones.
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Gris/Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de la masa en alicatados</th>
+                                                <td>de 6 a 10 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de la masa en ensolados</th>
+                                                <td>de 6 a 10 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento en alicatados</th>
+                                                <td>de 4 a 5 kgs/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento en ensolados</th>
+                                                <td>de 7 a 8 kgs/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de mezcla</th>
+                                                <td>6,5-7 litros por 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo abierto según UNE EN 1346</th>
+                                                <td>30 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo de rectiﬁcación</th>
+                                                <td>15 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia inicial según UNE EN 1348</th>
+                                                <td>2,1 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia después de inmersión en agua según UNE EN 1348</th>
+                                                <td>1,4 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia tras ciclos hielo-deshielo según UNE 1348</th>
+                                                <td>1,3 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia tras envejecimiento con calor UNE 1348</th>
+                                                <td>1,8 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción frente al fuego</th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Espera para rejuntado</th>
+                                                <td>4-8 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Deslizamiento en pared vertical UNE EN 1308</th>
+                                                <td>
+                                                    < 0,5 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante la aplicación</th>
+                                                <td>min 5°C, max 32°C</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Densidad de la masa</th>
+                                                <td>1,6 gr/cm3</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Cemento gris / blanco
+                                            <br>Áridos silíceos
+                                            <br>Aditivos y resinas
+                                            <hr>
+                                            <p> <b>Precauciones</b></p>
+                                            <p>Los componentes del producto no son tóxicos.
+                                                <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                                <br> </p>
+                                            <hr>
+                                            <p> <b>Primeros Auxilios</b></p>
+                                            <p>Piel: Lavar con abundante agua.
+                                                <br> Ojos: Lavar con abundante agua.
+                                                <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Cemento cola panzer gris/blanco (C1T)< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-panzerg">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png" /></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-panzerg">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/panzer_flex_gris_blanco.jpg" style="width:40%;">Cemento cola panzer flex (C2TE)</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #ee1d23; color: white">
+                                        Mortero-cola para alicatado, ensolado de porcelánicos y suelos radiantes
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Mortero cola de altas prestaciones con aditivos que aumentan la resistencia y proporcionan un alto grado de elasticidad e impermeabilidad.
+                                            <br>Indicado para la colocación de revestimientos de baja absorción:Cerámica porcelánica, mármoles, piezas cerámicas de formato grande y suelos radiantes.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Monocomponente.</li>
+                                            <li type="square">Deslizamiento vertical nulo.</li>
+                                            <li type="square">Aplicación en capa ﬁna.</li>
+                                            <li type="square">Excelente trabajabilidad.</li>
+                                            <li type="square">Gran resistencia a las heladas y alto grado de impermeabilidad.</li>
+                                            <li type="square">Fabricado a base de resinas sintéticas, plastiﬁcantes y espesantes.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li> Verter primero el agua y luego el mortero-cola.</li>
+                                            <li>
+                                                Amasar en gavetas en proporción aproximada de 6 a 7 litros cada 25 kgs.
+                                            </li>
+                                            <li>
+                                                Es muy importante no añadir más agua que la recomendada, puesto que mermarían las condiciones físicas y químicas del producto.
+                                            </li>
+                                            <li>
+                                                Batir manualmente o con batidora (mejor lenta, 500 rpm) hasta conseguir una pasta homogénea.
+                                            </li>
+                                            <li>
+                                                Dejar reposar durante 5 minutos antes de aplicar, para que actúen correctamente los aditivos y luego mezclar nuevamente antes de usar.
+                                            </li>
+                                            <li>
+                                                Nunca añadir agua después de dejar reposar la masa.
+                                            </li>
+                                        </ol>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> El soporte debe estar limpio y seco.
+                                            <br>Extender el producto con la parte lisa de la llana para asegurar un contacto completo con el fondo de colocación.
+                                            <br>Aplicar la llana dentada (nº6-8) en paños no superiores a 1,5 - 2 m2.
+                                            <br>Comprobar que no se forme una película superﬁ cial sobre el adhesivo (en tal caso, es suﬁciente pasar de nuevo la llana con producto fresco).
+                                            <br>Colocar la cerámica dejando juntas de 2-3 mm.
+                                            <br>
+                                            <br> Recomendamos:
+                                        </p>
+                                        <ul>
+                                            <li type="square">Dejar juntas de dilatación de 3 mm en los extremos de los paños verticales (en paños largos cada 3 ml).</li>
+                                            <li type="square">En ensolados dejar juntas perimetrales de 6 mm (en paños largos cada 5 metros lineales).</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Dónde se utiliza? </b></p>
+                                        <p> Colocación de material cerámico, en paredes y pavimentos. Interior y exterior.
+                                            <br>Fondo de colocación: Hormigón, revoques de cemento, mortero de cementocal, soleras de cemento, suelos radiantes, azulejo antiguo, piscinas, tabiquería PYL.
+                                            <br>Los fondos deben ser sólidos, limpios y secos, sin grietas ni deformaciones.
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Gris/Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de la masa en alicatados</th>
+                                                <td>de 6 a 10 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de la masa en ensolados</th>
+                                                <td>de 6 a 10 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento en alicatados</th>
+                                                <td>de 4 a 7 kgs/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento en ensolados</th>
+                                                <td>de 7 a 8 kgs/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de mezcla</th>
+                                                <td>6,5-7 litros por 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo abierto según UNE EN 1346</th>
+                                                <td>30 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo de rectiﬁcación</th>
+                                                <td>15 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia inicial según UNE EN 1348</th>
+                                                <td>1,4 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia después de inmersión en agua según UNE EN 1348</th>
+                                                <td>1,1 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia tras ciclos hielo-deshielo según UNE 1348</th>
+                                                <td>1,3 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia tras envejecimiento con calor UNE 1348</th>
+                                                <td>1,2 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción frente al fuego</th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Espera para rejuntado en revestimentos</th>
+                                                <td>4-8 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Espera para rejuntado en pavimentos</th>
+                                                <td>24 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante la aplicación</th>
+                                                <td>min 5°C, max 32°C</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Densidad de la masa</th>
+                                                <td>1,65 gr/cm3</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Cemento gris / blanco
+                                            <br>Áridos silíceos.
+                                            <br>Aditivos y resinas
+                                            <hr>
+                                            <p> <b>Precauciones</b></p>
+                                            <p>Los componentes del producto no son tóxicos.
+                                                <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                                <br> </p>
+                                            <hr>
+                                            <p> <b>Primeros Auxilios</b></p>
+                                            <p>Piel: Lavar con abundante agua.
+                                                <br> Ojos: Lavar con abundante agua.
+                                                <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Cemento cola panzer flex gris/blanco (C2TE)< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-panzers">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png" /></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-panzers">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/panzer_semiflex.jpg" style="width:40%;">Cemento cola panzer semiflex (C2TE)</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #ee1d23; color: white">
+                                        Mortero-cola semiﬂexible
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Mortero-cola semiﬂexible con gran impermeabilidad y ﬂ exibilidad, idóneo para el alicatado de piscinas.
+                                            <br>También aplicación de alicatado de zonas húmedas.
+                                            <br>Cerámica: Absorción media-baja.
+                                            <br>Fondos de colocación: Hormigón, revoques y soleras de cemento.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Monocomponente.</li>
+                                            <li type="square">Semiflexible.</li>
+                                            <li type="square">Aplicación en capa ﬁna.</li>
+                                            <li type="square">Resistente a las heladas y gran resistencia a la humedad.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li> Verter primero el agua y luego el mortero-cola.</li>
+                                            <li>
+                                                Amasar en gavetas en proporción aproximada de 6 a 7 litros cada 25 kgs.
+                                            </li>
+                                            <li>
+                                                Es muy importante no añadir más agua que la recomendada, puesto que mermarían las condiciones físicas y químicas del producto.
+                                            </li>
+                                            <li>
+                                                Batir manualmente o con batidora (mejor lenta, 500 rpm) hasta conseguir una pasta homogénea.
+                                            </li>
+                                            <li>
+                                                Dejar reposar durante 5 minutos antes de aplicar, para que actúen correctamente los aditivos y luego mezclar nuevamente antes de usar.
+                                            </li>
+                                            <li>
+                                                Nunca añadir agua después de dejar reposar la masa.
+                                            </li>
+                                        </ol>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> El soporte debe estar limpio y seco.
+                                            <br>En caso de hormigón, asegurarse de su retracción y de no haber aditivos de curación o selladores (en tal caso, dar antes una mano de PRIMER).
+                                            <br>Extender el producto con el lado liso de la llana para un contacto completo.
+                                            <br>Aplicar la llana dentada (nº6) en paños no superiores a 1,5 - 2 m2.
+                                            <br>Comprobar que no se forme una película superﬁ cial sobre el adhesivo (en tal caso, pasar la llana con un poco de producto fresco).
+                                            <br>Sobre soleras en mal estado se recomienda el uso de <a href="#" class="link popup-open" data-popup=".popup-panzerg">panzer flex </a>.
+                                            <br> A las 24 horas, tapar juntas con un material hidrófugo, <a href="#" class="link popup-open" data-popup=".popup-tapazul">tapazul </a> o juncolor e impermeabilizarlos con <a href="#" class="link popup-open" data-popup=".popup-adesilatex">ADESILATEX 1000</a>.
+                                            <br>Para limpiar los azulejos de las piscinas y reforzar juntas, usar <a href="#" class="link popup-open" data-popup=".popup-tapazul">tapazul</a>.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Dónde se utiliza? </b></p>
+                                        <p> Colocación de material cerámico en exteriores, en piscina.
+                                            <br>Fondo de colocación: Hormigón, revoques de cemento, mortero de cementocal, soleras de cemento, suelos radiantes, azulejo antiguo, piscinas, tabiquería PYL.
+                                            <br>Los fondos deben ser sólidos, limpios y secos, sin grietas ni deformaciones.
+                                            <br>No utilizar: Sobre metal, ﬁbrocemento, madera (no ﬂexible), baldosas y azulejos antiguos.
+                                            <br>En estos casos, mezclar con <a href="#" class="link popup-open" data-popup=".popup-adesilatex">adesilatex 1000 </a>(6 litros cada 25 kg)</br>
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Gris/Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de la masa en alicatados</th>
+                                                <td>de 6 a 10 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de la masa en ensolados</th>
+                                                <td>de 6 a 10 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento en alicatados</th>
+                                                <td>de 4 a 7 kgs/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento en ensolados</th>
+                                                <td>de 7 a 8 kgs/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de mezcla</th>
+                                                <td>6,5-7 litros por 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo abierto según UNE EN 1346</th>
+                                                <td>30 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo de rectiﬁcación</th>
+                                                <td>15 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia inicial según UNE EN 1348</th>
+                                                <td>1,4 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia después de inmersión en agua según UNE EN 1348</th>
+                                                <td>1,1 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia tras ciclos hielo-deshielo según UNE 1348</th>
+                                                <td>1,3 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia tras envejecimiento con calor UNE 1348</th>
+                                                <td>1,2 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción frente al fuego</th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Espera para rejuntado en revestimentos</th>
+                                                <td>4-8 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Espera para rejuntado en pavimentos</th>
+                                                <td>24 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante la aplicación</th>
+                                                <td>min 5°C, max 32°C</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Densidad de la masa</th>
+                                                <td>1,65 gr/cm3</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Cemento gris / blanco
+                                            <br>Áridos silíceos.
+                                            <br>Aditivos y resinas
+                                            <hr>
+                                            <p> <b>Precauciones</b></p>
+                                            <p>Los componentes del producto no son tóxicos.
+                                                <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                                <br> </p>
+                                            <hr>
+                                            <p> <b>Primeros Auxilios</b></p>
+                                            <p>Piel: Lavar con abundante agua.
+                                                <br> Ojos: Lavar con abundante agua.
+                                                <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Cemento cola panzer semiflex (C2TE)< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-adesilatex">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png" /></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-adesilatex">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/adesilatex.jpg" style="width:40%;">Impermeabilizante adesilatex</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #f9a51b">
+                                        Aditivo para reforzar e impermeabilizar morteros y pinturas
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un líquido a base de látex y otros compuestos químicos que, amasado junto a morteros-cola, les refuerza y ﬂexibiliza.
+                                            <br>Además proporciona:
+                                            <ul>
+                                                <li type="square">Plasticidad</li>
+                                                <li type="square">Mayor adherencia.</li>
+                                                <li type="square">Mejor trabajabilidad.</li>
+                                                <li type="square">Mayor impermeabilidad.</li>
+                                            </ul>
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Monocomponente.</li>
+                                            <li type="square">Flexible (deformable - elástico).</li>
+                                            <li type="square">Potencia más del 100% la resistencia al arranque.</li>
+                                            <li type="square">Impermeabiliza el mortero..</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li> Agitar el producto antes de usar</li>
+                                            <li>
+                                                Verter primero el ADESILÁTEX y luego el mortero-cola.
+                                            </li>
+                                            <li>
+                                                Amasar en gavetas en proporción aproximada de 6-6,5 litros por cada 25 kgs (saco).
+                                            </li>
+                                            <li>
+                                                Batir manualmente o con batidora (mejor lenta, 500 rpm) hasta conseguir una pasta homogénea.
+                                            </li>
+                                            <li>
+                                                Nunca añadir más ADESILÁTEX después de dejar reposar la masa.
+                                            </li>
+                                        </ol>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> Elaborar la masa del mortero sustituyendo el agua por ADESILÁTEX.
+                                            <br>Una vez realizada la masa, se debe trabajar como si un mortero-cola normal se tratase:
+                                        </p>
+                                        <ul>
+                                            <li type="square">Extender el producto con la parte lisa de la llana para asegurar un contacto completo con el fondo de colocación.</li>
+                                            <li type="square">Aplicar la llana dentada (nº6-8) en paños no superiores a 1,5 - 2 m2.</li>
+                                            <li type="square">Comprobar que no se forme una película superﬁ cial sobre el adhesivo (en tal caso, es suﬁciente pasad de nuevo la llana con un poco de producto fresco).</li>
+                                            <li type="square">A las 24 horas, tapar juntas con tapazul o juncolor con ADESILÁTEX.</li>
+                                        </ul>
+                                        <p>
+                                            Nota: Como reforzante de pinturas, añadir 1 litro de ADESILÁTEX por cada 6 litros de pintura.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Dónde se utiliza? </b></p>
+                                        <p> Como imprimación en interiores y exteriores.
+                                            <br>Fondo de colocación: Ladrillo, bloques, gres, terracota, hormigón satinado, revocos, morteros calizos, soleras de cemento, piscinas, ﬁbrocemento, suelos radiantes, suelos de madera, baldosas y azuelos antiguos.
+                                            <br>Los fondos deben ser sólidos, limpios, secos y sin deformaciones
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Líquido blanquecino</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Garrafas de 25 y 5 litros</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adesilatex de mezcla con morteros y cementos-cola</th>
+                                                <td>6-6,5 litros por 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Látex.
+                                            <br> Resinas sintéticas.>
+                                            <hr>
+                                            <p> <b>Precauciones</b></p>
+                                            <p>Los componentes del producto no son tóxicos.
+                                                <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                                <br> </p>
+                                            <hr>
+                                            <p> <b>Primeros Auxilios</b></p>
+                                            <p>Piel: Lavar con abundante agua.
+                                                <br> Ojos: Lavar con abundante agua.
+                                                <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Impermeabilizante adesilatex< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-tapazul">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png" /></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-tapazul">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/tapazul.jpg" style="width:70%;">Tapazul tapajuntas blanco</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #71c69c">
+                                        Pasta blanca para rellenar juntas ﬁnas de azulejos y baldosas
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es una pasta blanca para el relleno y el sellado de juntas de 1 a 6 mm entre cerámicas de absorción media-alta (azulejos, gres, gresite).
+                                            <br>Para cerámica de baja absorción (porcelánicos, mármoles) se recomienda TAPAZUL mas ADESILATEX
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Material de rejuntado cementoso mejorado.</li>
+                                            <li type="square">Relleno de juntas de 1 a 6 mm.</li>
+                                            <li type="square">Excelente trabajabilidad y fácil aplicación.</li>
+                                            <li type="square">Elevada dureza y resistente a las heladas.</li>
+                                            <li type="square">Hidrófugo.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li value="1">Verter primero el agua y luego la pasta tapajuntas. </li>
+                                            <li>Amasar en gavetas en proporción aproximada de 1,2 litros cada 4 kgs.</li>
+                                            <li>Es muy importante no añadir más agua que la recomendada, puesto que mermarían las condiciones físicas y químicas del producto. </li>
+                                            <li>Batir manualmente o con batidora (mejor lenta, 500 rpm) hasta conseguir una pasta homogénea.</li>
+                                            <li>Dejar reposar durante 5 minutos antes de aplicar, para que actúen correctamente los aditivos y luego mezclar nuevamente antes de usar. </li>
+                                            <li>Nunca añadir agua después de dejar reposar la masa.</li>
+                                        </ol>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> Deben transcurrir al menos 24 horas desde la colocación de la cerámica para poder proceder a su rejuntado.
+                                            <br> Limpiar bien todas las juntas del material de agarre sobrante.
+                                            <br> Amasar "Tapazul" hasta conseguir una pasta homogénea y sin grumos.
+                                            <br> Rellenar las juntas con el producto; esta operación puede hacerse con diversos útiles: Pincel, brocha, pistola de relleno, espátulas de goma...
+                                            <br>Una vez rellenas las juntas, dejar reposar el producto hasta que comience a endurecer, cuando se eliminarán los sobrantes con una esponja humeda.
+                                            <br> Transcurridas 24 horas desde el rejuntado, ya se podrá limpiar la superﬁ cie con un paño húmedo.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Dónde se utiliza? </b></p>
+                                        <p>
+                                            Rejuntado de juntas de azulejos de todo tipo, tanto en interiores como exteriores, especialmente indicado para la colocación con distancia mínima y también para juntas de hasta 6 mm.
+                                            <br> Las juntas deben estar limpias y secas.
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Bolsa 6 kgs </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de las juntas</th>
+                                                <td>de 1 a 6 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento</th>
+                                                <td>(*)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Retracción</th>
+                                                <td>1,39 mm/m </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de Mezcla</th>
+                                                <td>1,2 litros por cada 4 kg</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo de uso</th>
+                                                <td>4-6 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante aplicación</th>
+                                                <td>min 5ºC, max 32ºC</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia térmica </th>
+                                                <td>de -5ºC a 80ºC</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia a la flexión</th>
+                                                <td>6,2 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia a la compresión </th>
+                                                <td>25,0 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Absorción</th>
+                                                <td>240 min: 0,45 gr </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación y al abrigo de la humedad)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Cemento blanco
+                                            <br> Aditivos orgánicos e inorgánicos.
+                                            <br> Impermeabilizantes y plastiﬁcantes</p>
+                                        <hr>
+                                        <p> <b>Precauciones</b></p>
+                                        <p>Los componentes del producto no son tóxicos.
+                                            <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                            <br> </p>
+                                        <hr>
+                                        <p> <b>Primeros Auxilios</b></p>
+                                        <p>Piel: Lavar con abundante agua.
+                                            <br> Ojos: Lavar con abundante agua.
+                                            <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Tapazul tapajuntas blanco< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

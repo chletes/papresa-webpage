@@ -1,0 +1,337 @@
+<div id="app">
+    <!--
+    <div class="panel panel-left panel-reveal">
+        <div class="block">
+            <div class="block-title">Bienvenido!</div>
+            <div class="list accordion-list">
+                <ul>
+                    <li class="accordion-item"><a href="/index/" class="item-link item-content panel-close">Inicio</a></li>
+                    <li class="accordion-item"><a href="/compania/" class="item-link item-content panel-close"> Compañía </a> </li>
+                    <li class="accordion-item"><a href="/formulario_index/" class="item-link item-content panel-close"> Formulario </a> </li>
+                    <li class="accordion-item">
+                        <div class="item-title"><a href="#" class="item-content item-link"> Productos </a></div>
+                        <div class="accordion-item-content">
+                            <p><a href="/pescayola/" style="padding-left:25px;" class="item-link panel-close"> · Escayola-cola</a></p>
+                            <p><a href="/pcemento/" style="padding-left:25px;" class="item-link panel-close"> · Cemento-cola</a></p>
+                            <p><a href="/ptapajuntas/" style="padding-left:25px;" class="item-link panel-close"> · Tapajuntas sellantes</a></p>
+                            <p><a href="/pmorteros/" style="padding-left:25px;" class="item-link panel-close"> · Morteros</a></p>
+                            <p><a href="/ppastaniv/" style="padding-left:25px;" class="item-link panel-close"> · Pasta niveladora</a></p>
+                            <p><a href="/pimper/" style="padding-left:25px;" class="item-link panel-close"> · Impermeabilizantes</a></p>
+                            <p><a href="/potros/" style="padding-left:25px;" class="item-link panel-close"> · Otros Productos</a></p>
+                        </div>
+                    </li>
+                    <li class="accordion-item"><a href="/localizacion/" class="item-link item-content panel-close">Localización</a></li>
+                    <li class="accordion-item"><a href="/contacto/" class="item-link item-content panel-close">Contacto</a></li>
+                </ul>
+            </div>
+            <p> <a class="panel-close" href="#"> Cerrar panel lateral </a></p>
+        </div>
+    </div>-->
+    <div class="view view-main view-init">
+        <div class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left" style="margin-right: 3px;">
+                        <p>
+                            <a class="link back" href="#">
+                                <button class="button" style="width:auto;">Back</button>
+                            </a>
+                        </p>
+                    </div>
+                    <!--<div class="title" style="font-size:16px">CUBRIR FISURAS EN LA PARED</div>-->
+                    <div class="right">
+                        <img class="logoPapresa" src="img/logopapresa_sangre.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="block">
+                    <!--<a class="link back" style="color: white;">-->
+                    <div class="elevation-demo elevation-13 task-fijada">
+                        <p style="margin:0;padding:4%">REVESTIMIENTO DE PAREDES
+                            <br> > SOBRE HORMIGÓN
+                            <br> > EXTERIOR
+                            <br> > APLICACIÓN MECÁNICA</p>
+                    </div>
+                    <!--</a>-->
+                    <hr class="myHR">
+                    <!--#2196f3b0-->
+                    <div class="card" style="margin-top: 25px;">
+                        <div class="card-header">Pared</div>
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <div class="list inset">
+                                <ul>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Largo del suelo en metros</div>
+                                                <input type="number" id="largo" placeholder="24">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Ancho del suelo en metros</div>
+                                                <input type="number" id="ancho" placeholder="42">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="col button button-fill mecaExtHormiRevest" href="#" style="width: 100px;margin: auto;border-radius: 20px">Calcular
+                    </button>
+                    <div class="card" id="result" style="display:none">
+                        <!--<div class="card-header">Resultado</div>-->
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <h4 style="margin-top: 0; color: #E03337;">Para los productos listados a continuación, aconsejamos dar primero una imprimación con brocha de <a href="#" class="link popup-open" data-popup=".popup-adesilatex">adesilatex 1000</a>, y a continuación aplicar el producto.</h4>
+                            <hr>
+                            <h3 id='resultado1' style="margin-top: 0"></h3>
+                            <hr>
+                            <button class="buton-special button col link popup-open" data-popup=".popup-secop">
+                                <img src="img/sacos/mortero_seco_de_proyectar.jpg" style="width:40%;">
+                            </button>
+                            <p style="text-align: center;">Mortero seco de proyectar</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-secop">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png"/></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-secop">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/mortero_seco_de_proyectar.jpg" style="width:40%;">Mortero seco de proyectar</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #bcc4c9">
+                                        Mortero de proyectar para ﬁjar placas de ﬁbra y lana de roca
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un mortero gris de proyectar con máquina sobre paramentos de ladrillo y bloques de hormigón, actuando como adhesivo para la ﬁjación de placas de ﬁ bra de vidrio o lana de roca.
+                                            <br> Enfoscados.</p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Fácil aplicación mediante maquinaria de proyectar.</li>
+                                            <li type="square">Gran poder de adherencia para la colocación de elementos aislantes.</li>
+                                            <li type="square">Hidrófugo: Protege contra la humedad.</li>
+                                            <li type="square">Monocomponente.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <p>Este producto está especialmente diseñado para su aplicación mediante máquina de proyección.
+                                            <br>Se recomienda ajustar la máquina en relación agua/mortero del 25% e ir modiﬁ cando esta relación hasta conseguir la densidad de masa deseada.
+                                            <br>La relación agua/mortero puede variar según las condiciones de la obra.
+                                            <br>En caso de aplicación manual, mezclar en una gaveta de 6-7 litros de agua por cada 25 kg de mortero.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> Proyectar mediante máquina el mortero sobre el paramento. El caudal de agua de la maquinaria debe graduarse para que la densidad de la masa proporcione un mínimo descuelgue.
+                                            <br> Una vez proyectado, el mortero debe alisarse mediante llana, procurando que toda la superﬁ cie quede recubierta y eliminando al mismo tiempo posibles bolsas de aire.
+                                            <br> El espesor de la capa resultante debe tener entre 5 y 10 mm.
+                                            <br>Fijar los paneles, de ﬁbra de vidrio o lana de roca, mediante presión manual. Se recomienda colocar estas placas aislantes de arriba hacia abajo, para que los paneles que deban ser recortados para su ajuste sean los inferiores. De esta forma se facilita el trabajo.
+                                            <br>Fijar los paneles dentro del "tiempo abierto" del producto (20 minutos). Fuera de este tiempo disminuyen sus propiedades.
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Gris</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento</th>
+                                                <td>6-7 kgs/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de Mezcla</th>
+                                                <td>+/- 25%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de la masa</th>
+                                                <td>5-10 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo abierto</th>
+                                                <td>20 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante aplicación</th>
+                                                <td>min 3°C, max 30°C </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción frente al fuego</th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Cemento gris
+                                            <br> Áridos silíceos
+                                            <br> Aditivos y resinas</p>
+                                        <hr>
+                                        <p> <b>Precauciones</b></p>
+                                        <p>Los componentes del producto no son tóxicos.
+                                            <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                            <br> </p>
+                                        <hr>
+                                        <p> <b>Primeros Auxilios</b></p>
+                                        <p>Piel: Lavar con abundante agua.
+                                            <br> Ojos: Lavar con abundante agua.
+                                            <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Mortero seco de proyectar< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-adesilatex">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png"/></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-adesilatex">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/adesilatex.jpg" style="width:40%;">Impermeabilizante adesilatex</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #f9a51b">
+                                        Aditivo para reforzar e impermeabilizar morteros y pinturas
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un líquido a base de látex y otros compuestos químicos que, amasado junto a morteros-cola, les refuerza y ﬂexibiliza.
+                                            <br>Además proporciona:
+                                            <ul>
+                                                <li type="square">Plasticidad</li>
+                                                <li type="square">Mayor adherencia.</li>
+                                                <li type="square">Mejor trabajabilidad.</li>
+                                                <li type="square">Mayor impermeabilidad.</li>
+                                            </ul>
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Monocomponente.</li>
+                                            <li type="square">Flexible (deformable - elástico).</li>
+                                            <li type="square">Potencia más del 100% la resistencia al arranque.</li>
+                                            <li type="square">Impermeabiliza el mortero..</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li> Agitar el producto antes de usar</li>
+                                            <li>
+                                                Verter primero el ADESILÁTEX y luego el mortero-cola.
+                                            </li>
+                                            <li>
+                                                Amasar en gavetas en proporción aproximada de 6-6,5 litros por cada 25 kgs (saco).
+                                            </li>
+                                            <li>
+                                                Batir manualmente o con batidora (mejor lenta, 500 rpm) hasta conseguir una pasta homogénea.
+                                            </li>
+                                            <li>
+                                                Nunca añadir más ADESILÁTEX después de dejar reposar la masa.
+                                            </li>
+                                        </ol>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> Elaborar la masa del mortero sustituyendo el agua por ADESILÁTEX.
+                                            <br>Una vez realizada la masa, se debe trabajar como si un mortero-cola normal se tratase:
+                                        </p>
+                                        <ul>
+                                            <li type="square">Extender el producto con la parte lisa de la llana para asegurar un contacto completo con el fondo de colocación.</li>
+                                            <li type="square">Aplicar la llana dentada (nº6-8) en paños no superiores a 1,5 - 2 m2.</li>
+                                            <li type="square">Comprobar que no se forme una película superﬁ cial sobre el adhesivo (en tal caso, es suﬁciente pasad de nuevo la llana con un poco de producto fresco).</li>
+                                            <li type="square">A las 24 horas, tapar juntas con tapazul o juncolor con ADESILÁTEX.</li>
+                                        </ul>
+                                        <p>
+                                            Nota: Como reforzante de pinturas, añadir 1 litro de ADESILÁTEX por cada 6 litros de pintura.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Dónde se utiliza? </b></p>
+                                        <p> Como imprimación en interiores y exteriores.
+                                            <br>Fondo de colocación: Ladrillo, bloques, gres, terracota, hormigón satinado, revocos, morteros calizos, soleras de cemento, piscinas, ﬁbrocemento, suelos radiantes, suelos de madera, baldosas y azuelos antiguos.
+                                            <br>Los fondos deben ser sólidos, limpios, secos y sin deformaciones
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Líquido blanquecino</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Garrafas de 25 y 5 litros</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adesilatex de mezcla con morteros y cementos-cola</th>
+                                                <td>6-6,5 litros por 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Látex.
+                                            <br> Resinas sintéticas.>
+                                            <hr>
+                                            <p> <b>Precauciones</b></p>
+                                            <p>Los componentes del producto no son tóxicos.
+                                                <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                                <br> </p>
+                                            <hr>
+                                            <p> <b>Primeros Auxilios</b></p>
+                                            <p>Piel: Lavar con abundante agua.
+                                                <br> Ojos: Lavar con abundante agua.
+                                                <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Impermeabilizante adesilatex< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

@@ -1,0 +1,70 @@
+<style>
+.elevation-demo {
+    margin: 24px;
+    background: #fff;
+    font-size: 103%;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 65px;
+}
+</style>
+<div id="app">
+    <div class="panel panel-left panel-reveal">
+        <div class="block">
+            <div class="block-title">Bienvenido!</div>
+            <div class="list accordion-list">
+                <ul>
+                    <li class="accordion-item"><a href="/index/" class="item-link item-content panel-close">Inicio</a></li>
+                    <li class="accordion-item"><a href="/compania/" class="item-link item-content panel-close"> Compañía </a> </li>
+                    <li class="accordion-item">
+                        <div class="item-title"><a href="#" class="item-content item-link"> Productos </a></div>
+                        <div class="accordion-item-content">
+                            <p><a href="/pescayola/" style="padding-left:25px;" class="item-link panel-close"> · Escayola-cola</a></p>
+                            <p><a href="/pcemento/" style="padding-left:25px;" class="item-link panel-close"> · Cemento-cola</a></p>
+                            <p><a href="/ptapajuntas/" style="padding-left:25px;" class="item-link panel-close"> · Tapajuntas sellantes</a></p>
+                            <p><a href="/pmorteros/" style="padding-left:25px;" class="item-link panel-close"> · Morteros</a></p>
+                            <p><a href="/ppastaniv/" style="padding-left:25px;" class="item-link panel-close"> · Pasta niveladora</a></p>
+                            <p><a href="/pimper/" style="padding-left:25px;" class="item-link panel-close"> · Impermeabilizantes</a></p>
+                            <p><a href="/potros/" style="padding-left:25px;" class="item-link panel-close"> · Otros Productos</a></p>
+                        </div>
+                    </li>
+                    <li class="accordion-item"><a href="/localizacion/" class="item-link item-content panel-close">Localización</a></li>
+                    <li class="accordion-item"><a href="/contacto/" class="item-link item-content panel-close">Contacto</a></li>
+                </ul>
+            </div>
+            <p> <a class="panel-close" href="#"> Cerrar panel lateral </a></p>
+        </div>
+    </div>
+    <div class="view view-main view-init">
+        <div class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <p>
+                            <a class="panel-open" href="#" data-panel="left">
+                                <button class="button" style="width:auto;margin-left:10px;">Menu</button>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="img/logopapresa_sangre.png" style="width:42%;margin-left:50%" />
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="block">
+                    <div class="elevation-demo elevation-24">FIJACIÓN DE CERÁMICA EN CAPA FINA</div>
+                    <div class="elevation-demo elevation-24">FIJACIÓN DE CERÁMICA EN CAPA GRUESA</div>
+                    <div class="elevation-demo elevation-24">RELLENO DE JUNTAS</div>
+                    <div class="elevation-demo elevation-24">IMPERMEABILIZAR</div>
+                    <div class="elevation-demo elevation-24">NIVELACIÓN DE SUELOS</div>
+                    <div class="elevation-demo elevation-24">REVESITIMIENTO DE PAREDES</div>
+                    <div class="elevation-demo elevation-24">CONSTRUIR PAREDES</div>
+                    <div class="elevation-demo elevation-24">CUBRIR FISURAS EN LA PARED</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="./framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="./js/my-app.js"></script>

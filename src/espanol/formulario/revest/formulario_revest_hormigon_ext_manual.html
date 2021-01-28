@@ -1,0 +1,645 @@
+<div id="app">
+    <!--
+    <div class="panel panel-left panel-reveal">
+        <div class="block">
+            <div class="block-title">Bienvenido!</div>
+            <div class="list accordion-list">
+                <ul>
+                    <li class="accordion-item"><a href="/index/" class="item-link item-content panel-close">Inicio</a></li>
+                    <li class="accordion-item"><a href="/compania/" class="item-link item-content panel-close"> Compañía </a> </li>
+                    <li class="accordion-item"><a href="/formulario_index/" class="item-link item-content panel-close"> Formulario </a> </li>
+                    <li class="accordion-item">
+                        <div class="item-title"><a href="#" class="item-content item-link"> Productos </a></div>
+                        <div class="accordion-item-content">
+                            <p><a href="/pescayola/" style="padding-left:25px;" class="item-link panel-close"> · Escayola-cola</a></p>
+                            <p><a href="/pcemento/" style="padding-left:25px;" class="item-link panel-close"> · Cemento-cola</a></p>
+                            <p><a href="/ptapajuntas/" style="padding-left:25px;" class="item-link panel-close"> · Tapajuntas sellantes</a></p>
+                            <p><a href="/pmorteros/" style="padding-left:25px;" class="item-link panel-close"> · Morteros</a></p>
+                            <p><a href="/ppastaniv/" style="padding-left:25px;" class="item-link panel-close"> · Pasta niveladora</a></p>
+                            <p><a href="/pimper/" style="padding-left:25px;" class="item-link panel-close"> · Impermeabilizantes</a></p>
+                            <p><a href="/potros/" style="padding-left:25px;" class="item-link panel-close"> · Otros Productos</a></p>
+                        </div>
+                    </li>
+                    <li class="accordion-item"><a href="/localizacion/" class="item-link item-content panel-close">Localización</a></li>
+                    <li class="accordion-item"><a href="/contacto/" class="item-link item-content panel-close">Contacto</a></li>
+                </ul>
+            </div>
+            <p> <a class="panel-close" href="#"> Cerrar panel lateral </a></p>
+        </div>
+    </div>-->
+    <div class="view view-main view-init">
+        <div class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left" style="margin-right: 3px;">
+                        <p>
+                            <a class="link back" href="#">
+                                <button class="button" style="width:auto;">Back</button>
+                            </a>
+                        </p>
+                    </div>
+                    <!--<div class="title" style="font-size:16px">CUBRIR FISURAS EN LA PARED</div>-->
+                    <div class="right">
+                        <img class="logoPapresa" src="img/logopapresa_sangre.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="block">
+                    <!--<a class="link back" style="color: white;">-->
+                    <div class="elevation-demo elevation-13 task-fijada">
+                        <p style="margin:0;padding:4%">REVESTIMIENTO DE PAREDES
+                            <br> > SOBRE HORMIGÓN
+                            <br> > EXTERIOR
+                            <br> > APLICACIÓN MANUAL</p>
+                    </div>
+                    <!--</a>-->
+                    <hr class="myHR">
+                    <!--#2196f3b0-->
+                    <div class="card" style="margin-top: 25px;">
+                        <div class="card-header">Pared</div>
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <div class="list inset">
+                                <ul>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Largo del suelo en metros</div>
+                                                <input type="number" id="largo" placeholder="24">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <div class="item-title item-label">Ancho del suelo en metros</div>
+                                                <input type="number" id="ancho" placeholder="42">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="col button button-fill manuExtHormiRevest" href="#" style="width: 100px;margin: auto;border-radius: 20px">Calcular
+                    </button>
+                    <div class="card" id="result" style="display:none">
+                        <!--<div class="card-header">Resultado</div>-->
+                        <div class="card-content card-content-padding" style="text-align:justify">
+                            <h4 style="margin-top: 0; color: #E03337;">Para los productos listados a continuación, aconsejamos dar primero una imprimación con brocha de <a href="#" class="link popup-open" data-popup=".popup-adesilatex">adesilatex 1000</a>, y a continuación aplicar el producto.</h4>
+                            <hr>
+                            <h3 id='resultado1' style="margin-top: 0"></h3>
+                            <hr>
+                            <button class="buton-special button col link popup-open" data-popup=".popup-seco">
+                                <img src="img/sacos/mortero_seco_gris.jpg" style="width:40%;">
+                            </button>
+                            <p style="text-align: center;">Mortero seco</p>
+                            <hr>
+                            <h4 id='resultado2' style="margin-top: 0"></h4>
+                            <hr>
+                            <button class="buton-special button col link popup-open" data-popup=".popup-shikkui5">
+                                <img src="img/sacos/shikkui.jpg" style="width:40%;">
+                            </button>
+                            <p style="text-align: center;">Papresa Shikkui 0,5</p>
+                            <hr style="width:48%">
+                            <button class="buton-special button col link popup-open" data-popup=".popup-shikkui15">
+                                <img src="img/sacos/shikkui.jpg" style="width:40%;">
+                            </button>
+                            <p style="text-align: center;">Papresa Shikkui 1,5</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-seco">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png"/></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-seco">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/mortero_seco_gris.jpg" style="width:40%;">Mortero seco</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #bcc4c9">
+                                        Mortero listo para el amasado para obras de albañilería
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un mortero gris listo para su utilización a falta de agua.
+                                            <br>Sus principales aplicaciones se dan en pequeñas obras de uso doméstico, para colocación de ladrillo, enfoscados, etc... </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Fácil aplicación.</li>
+                                            <li type="square">Producto ideal para el bricolaje.</li>
+                                            <li type="square">Gran comodidad (cemento y arena ya mezclados).</li>
+                                            <li type="square">Gran poder de adherencia.</li>
+                                            <li type="square">Monocomponente.</li>
+                                            <li type="square">Hidrófugo.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li value="1"> El amasado es tradicional, como todo mortero. </li>
+                                            <li>Añadir el agua necesaria, a conveniencia del usuario, hasta conseguir una masa consistente y fuerte (normalmente 4 litros de agua / 25 kgs)</li>
+                                        </ol>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> Colocación de material cerámico, en interiores y exteriores.
+                                            <br>Fondo de colocación: Revoques de cemento, mortero de cemento-cal y ladrillo. Los fondos deben ser sólidos, limpios, secos y sin deformaciones.
+                                            <br>
+                                            <br>No utilizar: Sobre metal, ﬁ brocemento, madera y azulejos antiguos. Para estas aplicaciones, mezclar PÁNZER con ADESILÁTEX 1000.
+                                            <br>Sobre hormigón, amasar el MORTERO SECO con ADESILÁTEX 1000.
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Gris y Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia a la compresión a los 28 días </th>
+                                                <td>M 10</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción frente al fuego </th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de Mezcla</th>
+                                                <td>4 litros por cada 25 kg</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Contenido en cloruros </th>
+                                                <td>menor que 0,01%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Absorción por capilaridad </th>
+                                                <td>0,43 kg/m2 min 0,5 </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo de uso </th>
+                                                <td>1,45 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante aplicación</th>
+                                                <td>min 3ºC, max 30ºC</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia térmica </th>
+                                                <td>de -5ºC a 80ºC</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Densidad de la masa</th>
+                                                <td>1,8 gr/cm3</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Cemento gris y blanco
+                                            <br> Áridos silíceos
+                                            <hr>
+                                            <p> <b>Precauciones</b></p>
+                                            <p>Los componentes del producto no son tóxicos.
+                                                <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                                <br> </p>
+                                            <hr>
+                                            <p> <b>Primeros Auxilios</b></p>
+                                            <p>Piel: Lavar con abundante agua.
+                                                <br> Ojos: Lavar con abundante agua.
+                                                <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Mortero seco gris< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-shikkui5">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png"/></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-shikkui5">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/shikkui.jpg" style="width:40%;">Papresa Shikkui 0,5</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #f9a51b">
+                                        Mortero flexible deformable ultrablanco
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un mortero de acabado a base de carbonato cálcico, ultra blanco, para aplicar sobre ladrilo, hormigón, cemento, placas de óxido de magnesio o yeso. Acabado fino con gran resistencia, durabilidad y flexibilidad.
+                                            <br>También uso como pasta de juntas
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Fácil aplicación manual.</li>
+                                            <li type="square">Producto ultra blanco.</li>
+                                            <li type="square">Flexibilidad extra para evitar grietas en condiciones extremas.</li>
+                                            <li type="square">Hidrófugo: Protege contra la humedad.</li>
+                                            <li type="square">Monocomponente..</li>
+                                            <li type="square">Uso Interior y exterior.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ul>
+                                            <li type="square">Este producto está especialmente diseñado para su aplicación manual.</li>
+                                            <li>Mezclar PAPRESA SHIKKUI 0,5 con 5-5,5 litros de agua limpia por cada saco de 20 kg.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo utilizar el producto? </b></p>
+                                        <ul>
+                                            <li type="square">Mezclar PAPRESA SHIKKUI 0,5 con agua, mejor con mezcladora lenta hasta conseguir una pasta cremosa y homogénea.</li>
+                                            <li type="square">Aplicar con una llana.</li>
+                                            <li type="square"> La capa resultante debe estar en tre 1 y 6 mm de espesor.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 20 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento</th>
+                                                <td>6-7 kg/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de mezcla</th>
+                                                <td>+/- 25%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de capa</th>
+                                                <td>1-6 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo abierto</th>
+                                                <td>20 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Densidad</th>
+                                                <td>1548kg/m3</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia sobre fondo cerámico</th>
+                                                <td>1,6 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia sobre hormigón</th>
+                                                <td>2,0 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia a compresión</th>
+                                                <td>26,2 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Coeficiente de absorción de agua</th>
+                                                <td>0,1 kg/m2 x min0,5</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Absorción de agua en 24 h</th>
+                                                <td>4,1%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Permeabilidad al vapor de agua</th>
+                                                <td>μ = 7,9</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante aplicación</th>
+                                                <td>min 3ºC, max 30ºC</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción al fuego</th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación y al abrigo de la humedad)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Cemento blanco.
+                                            <br> Carbonato cálcico.
+                                            <br> Aditivos.
+                                            <hr>
+                                            <p> <b>Precauciones</b></p>
+                                            <p>Los componentes del producto no son tóxicos.
+                                                <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                                <br> </p>
+                                            <hr>
+                                            <p> <b>Primeros Auxilios</b></p>
+                                            <p>Piel: Lavar con abundante agua.
+                                                <br> Ojos: Lavar con abundante agua.
+                                                <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Papresa Shikkui 0,5< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-shikkui15">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png"/></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-shikkui15">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/shikkui.jpg" style="width:40%;">Papresa Shikkui 1,5</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #f9a51b">
+                                        Mortero flexible deformable ultrablanco
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un mortero de acabado a base de carbonato cálcico, ultra blanco, para aplicar sobre ladrilo, hormigón, cemento, placas de óxido de magnesio o yeso. Acabado fino con gran resistencia, durabilidad y flexibilidad.
+                                            <br>También uso como pasta de juntas
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Fácil aplicación manual.</li>
+                                            <li type="square">Producto ultra blanco.</li>
+                                            <li type="square">Flexibilidad extra para evitar grietas en condiciones extremas.</li>
+                                            <li type="square">Hidrófugo: Protege contra la humedad.</li>
+                                            <li type="square">Monocomponente..</li>
+                                            <li type="square">Uso Interior y exterior.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ul>
+                                            <li type="square">Este producto está especialmente diseñado para su aplicación manual.</li>
+                                            <li>Mezclar PAPRESA SHIKKUI 1,5 con 5-5,5 litros de agua limpia por cada saco de 20 kg.</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo utilizar el producto? </b></p>
+                                        <ul>
+                                            <li type="square">Mezclar PAPRESA SHIKKUI 1,5 con agua, mejor con mezcladora lenta hasta conseguir una pasta cremosa y homogénea.</li>
+                                            <li type="square">Aplicar con una llana.</li>
+                                            <li type="square"> La capa resultante debe estar en tre 1 y 6 mm de espesor.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Polvo Blanco</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Saco 20 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Rendimiento</th>
+                                                <td>7-8 kg/m2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Agua de mezcla</th>
+                                                <td>+/- 25%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grosor de capa</th>
+                                                <td>1-10 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tiempo abierto</th>
+                                                <td>20 minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Densidad</th>
+                                                <td>1637 kg/m3</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia sobre fondo cerámico</th>
+                                                <td>1,5 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adherencia sobre hormigón</th>
+                                                <td>1,9 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Resistencia a compresión</th>
+                                                <td>30,4 N/mm2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Coeficiente de absorción de agua</th>
+                                                <td>0,2 kg/m2 x min0,5</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Absorción de agua en 24 h</th>
+                                                <td>4,3%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Permeabilidad al vapor de agua</th>
+                                                <td>μ = 7,1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Temperatura durante aplicación</th>
+                                                <td>min 3ºC, max 30ºC</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Reacción al fuego</th>
+                                                <td>A1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación y al abrigo de la humedad)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Cemento blanco.
+                                            <br> Carbonato cálcico.
+                                            <br> Aditivos.
+                                            <hr>
+                                            <p> <b>Precauciones</b></p>
+                                            <p>Los componentes del producto no son tóxicos.
+                                                <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                                <br> </p>
+                                            <hr>
+                                            <p> <b>Primeros Auxilios</b></p>
+                                            <p>Piel: Lavar con abundante agua.
+                                                <br> Ojos: Lavar con abundante agua.
+                                                <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Papresa Shikkui 1,5< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-adesilatex">
+                <div class="view">
+                    <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left"><img class="logoPapresa" src="img/logopapresa_sangre.png"/></div>
+                                <div class="right" style="left:0px"><a class="link popup-close" data-popup=".popup-adesilatex">Cerrar</a></div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="block">
+                                <div class="card">
+                                    <div class="card-header"><img src="img/sacos/adesilatex.jpg" style="width:40%;">Impermeabilizante adesilatex</div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color: #f9a51b">
+                                        Aditivo para reforzar e impermeabilizar morteros y pinturas
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>¿Para qué sirve este producto?</b></p>
+                                        <p>Es un líquido a base de látex y otros compuestos químicos que, amasado junto a morteros-cola, les refuerza y ﬂexibiliza.
+                                            <br>Además proporciona:
+                                            <ul>
+                                                <li type="square">Plasticidad</li>
+                                                <li type="square">Mayor adherencia.</li>
+                                                <li type="square">Mejor trabajabilidad.</li>
+                                                <li type="square">Mayor impermeabilidad.</li>
+                                            </ul>
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Cuáles son sus características?</b></p>
+                                        <ul>
+                                            <li type="square">Monocomponente.</li>
+                                            <li type="square">Flexible (deformable - elástico).</li>
+                                            <li type="square">Potencia más del 100% la resistencia al arranque.</li>
+                                            <li type="square">Impermeabiliza el mortero..</li>
+                                        </ul>
+                                        <hr>
+                                        <p> <b>¿Cómo se prepara la pasta?</b></p>
+                                        <ol>
+                                            <li> Agitar el producto antes de usar</li>
+                                            <li>
+                                                Verter primero el ADESILÁTEX y luego el mortero-cola.
+                                            </li>
+                                            <li>
+                                                Amasar en gavetas en proporción aproximada de 6-6,5 litros por cada 25 kgs (saco).
+                                            </li>
+                                            <li>
+                                                Batir manualmente o con batidora (mejor lenta, 500 rpm) hasta conseguir una pasta homogénea.
+                                            </li>
+                                            <li>
+                                                Nunca añadir más ADESILÁTEX después de dejar reposar la masa.
+                                            </li>
+                                        </ol>
+                                        <hr>
+                                        <p> <b>¿Cómo se trabaja? </b></p>
+                                        <p> Elaborar la masa del mortero sustituyendo el agua por ADESILÁTEX.
+                                            <br>Una vez realizada la masa, se debe trabajar como si un mortero-cola normal se tratase:
+                                        </p>
+                                        <ul>
+                                            <li type="square">Extender el producto con la parte lisa de la llana para asegurar un contacto completo con el fondo de colocación.</li>
+                                            <li type="square">Aplicar la llana dentada (nº6-8) en paños no superiores a 1,5 - 2 m2.</li>
+                                            <li type="square">Comprobar que no se forme una película superﬁ cial sobre el adhesivo (en tal caso, es suﬁciente pasad de nuevo la llana con un poco de producto fresco).</li>
+                                            <li type="square">A las 24 horas, tapar juntas con tapazul o juncolor con ADESILÁTEX.</li>
+                                        </ul>
+                                        <p>
+                                            Nota: Como reforzante de pinturas, añadir 1 litro de ADESILÁTEX por cada 6 litros de pintura.
+                                        </p>
+                                        <hr>
+                                        <p> <b>¿Dónde se utiliza? </b></p>
+                                        <p> Como imprimación en interiores y exteriores.
+                                            <br>Fondo de colocación: Ladrillo, bloques, gres, terracota, hormigón satinado, revocos, morteros calizos, soleras de cemento, piscinas, ﬁbrocemento, suelos radiantes, suelos de madera, baldosas y azuelos antiguos.
+                                            <br>Los fondos deben ser sólidos, limpios, secos y sin deformaciones
+                                        </p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#BDCCF0">
+                                        <p>Ficha Técnica</p>
+                                        <table class="egt" rules="rows">
+                                            <tr>
+                                                <th>Aspecto</th>
+                                                <td>Líquido blanquecino</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Presentación</th>
+                                                <td>Garrafas de 25 y 5 litros</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adesilatex de mezcla con morteros y cementos-cola</th>
+                                                <td>6-6,5 litros por 25 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Almacenaje (desde fecha de fabricación, bajo cubierta, en lugar seco)</th>
+                                                <td>12 meses</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <p> <b>Composición</b></p>
+                                        <p>Látex.
+                                            <br> Resinas sintéticas.>
+                                            <hr>
+                                            <p> <b>Precauciones</b></p>
+                                            <p>Los componentes del producto no son tóxicos.
+                                                <br> Se debe trabajar con guantes, evitar inhalación de polvo y el contacto con los ojos y la piel.
+                                                <br> </p>
+                                            <hr>
+                                            <p> <b>Primeros Auxilios</b></p>
+                                            <p>Piel: Lavar con abundante agua.
+                                                <br> Ojos: Lavar con abundante agua.
+                                                <br> Ingestión: Enjuagar con agua y beber abundante agua.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify;background-color:#CCC">
+                                        <p>Esta ﬁcha técnica se redacta según nuestros conocimiento y ensayos y no supone compromiso. Es responsabilidad del cliente la admisión y control en el almacén distribuidor u obra, así como la elección del producto a emplear en cada caso. La responsabilidad del fabricante se limita a los defectos de fabricación y por el valor de la mercancía ya que queda fuera de su control la elección del material a emplear y las condiciones de aplicación en obra. Ficha técnica para 2018.</p>
+                                    </div>
+                                    <div class="card-content card-content-padding" style="text-align:justify">
+                                        <a href="#" onclick="window.open('mailto:papresa@papresa.net?subject=Solicitud de la ficha técnica de >Impermeabilizante adesilatex< &body=Este email fue generado por la aplicacion de Papresa. ', '_system'); return false;">Para la ficha técnica de este producto, toca este enlace y envía el correo auto-generado por la aplicación.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
